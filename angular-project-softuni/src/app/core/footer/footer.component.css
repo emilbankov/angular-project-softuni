@@ -1,0 +1,103 @@
+.site-footer {
+    margin-top: auto;
+    background-color: rgb(245, 245, 247);
+    padding-top: 1em;
+    padding-bottom: 0.85em;
+}
+
+.footer-container {
+    margin: 0 auto;
+    width: 850px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container .contact-and-about {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 11px;
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.footer-container .contact-and-about .about-container {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.footer-container .contact-and-about .about-container .about-info {
+    width: 230px;
+}
+
+.contact-and-about p.contact,
+.contact-and-about p.shop-and-learn,
+.contact-and-about p.about {
+    display: flex;
+    height: 27px;
+    color: rgba(0, 0, 0, 0.88);
+    font-weight: 500;
+    align-items: center;
+}
+
+.about-container .about {
+    justify-content: flex-end;
+}
+
+.footer-container ul:first-of-type {
+    list-style: none outside;
+    width: 230px;
+}
+
+.footer-container ul:first-of-type li a {
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.footer-container ul:nth-of-type(2) {
+    list-style: none outside;
+    width: 100px;
+    text-align: center;
+}
+
+.footer-container ul:nth-of-type(2) p {
+    justify-content: center;
+}
+
+.footer-container ul:nth-of-type(2) li a {
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.footer-container ul li i {
+    font-size: 0.8em;
+    padding-right: 0.3rem;
+}
+
+.footer-container p,
+.footer-container ul li {
+    color: rgba(0, 0, 0, 0.56);
+    font-size: 0.6em;
+    letter-spacing: -.12px;
+    line-height: 0.8rem;
+}
+
+.about-container .about a {
+    display: block;
+    width: 12px;
+    height: 27px;
+    overflow: hidden;
+    text-indent: 300vw;
+    background-image: url("/images/apple-logo/apple-logo-svg-footer.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    margin-left: 0.2em;
+}
+
+.footer-container .copyright-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+    padding-top: 0.85rem;
+    margin-top: 0.85rem;
+}
