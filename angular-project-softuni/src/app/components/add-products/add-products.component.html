@@ -1,0 +1,58 @@
+<section class="site-section">
+    <div class="add-products">
+        <div class="form-add-product">
+            <div class="toggle-button">
+                <input type="radio" name="toggle" id="iphone" class="toggle-input" checked />
+                <input type="radio" name="toggle" id="ipad" class="toggle-input" />
+                <input type="radio" name="toggle" id="imac" class="toggle-input" />
+
+                <div class="toggle-container-products">
+                    <label for="iphone" class="toggle-label" onclick="showForm('iphone')"><img src="../../../assets/images/apple-iphone/iphone.svg" alt=""></label>
+                    <label for="ipad" class="toggle-label" onclick="showForm('ipad')"><img src="../../../assets/images/apple-ipad/ipad.svg" alt=""></label>
+                    <label for="imac" class="toggle-label" onclick="showForm('imac')"><img src="../../../assets/images/apple-imac/imac.svg" alt=""></label>
+                    <div class="toggle-circle"></div>
+                </div>
+            </div>
+            <form class="form" id="iphone-form">
+                <span class="iphone-add-span">iPhone</span>
+                <h3>iPhone</h3>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Image URL">
+                <input type="text" placeholder="Color">
+                <input type="text" placeholder="Battery Life">
+                <input type="text" placeholder="Description">
+                <input type="number" placeholder="Display (inch)">
+                <input type="number" placeholder="Storage">
+                <input type="number" placeholder="Price">
+                <button>Add Product</button>
+            </form>
+            <form style="display: none;" class="form" id="ipad-form">
+                <span class="ipad-add-span">iPad</span>
+                <h3>iPad</h3>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Image URL">
+                <input type="text" placeholder="Color">
+                <input type="text" placeholder="Battery Life">
+                <input type="text" placeholder="Description">
+                <input type="number" placeholder="Display (inch)">
+                <input type="number" placeholder="Storage">
+                <input type="number" placeholder="Price">
+                <button>Add Product</button>
+            </form>
+
+            <form style="display: none;" class="form" id="imac-form">
+                <span class="imac-add-span">iMac</span>
+                <h3>iMac</h3>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Image URL">
+                <input type="text" placeholder="CPU">
+                <input type="text" placeholder="GPU">
+                <input type="text" placeholder="Description">
+                <input type="number" placeholder="Display (inch)">
+                <input type="number" placeholder="Storage">
+                <input type="number" placeholder="Price">
+                <button>Add Product</button>
+            </form>
+        </div>
+    </div>
+</section>
