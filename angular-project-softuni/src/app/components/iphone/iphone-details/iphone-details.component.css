@@ -1,0 +1,201 @@
+.site-section.iphone-details-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #e7e7e7;
+    margin-top: 100px;
+    color: #1d1d1f;
+}
+
+.iphone-details-product {
+    display: flex;
+    width: 100%;
+    gap: 35px;
+}
+
+.iphone-details h3 {
+    font-weight: 600;
+    line-height: 2.4rem;
+    letter-spacing: -.4px;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.iphone-details-image img {
+    width: 300px;
+    height: 400px;
+}
+
+.iphone-details {
+    flex: 1;
+    width: 500px;
+}
+
+.iphone-details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.iphone-details-list li {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.iphone-details-list strong {
+    display: inline-block;
+    width: 130px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 21px;
+    line-height: 1.25rem;
+    letter-spacing: -.4px;
+}
+
+.iphone-details-list p {
+    font-size: 20px;
+    flex: 1;
+    margin-left: 10px;
+    text-align: left;
+    line-height: 1.2rem;
+    letter-spacing: -.4px;
+}
+
+.iphone-details-description {
+    border-top: 2px solid #e7e7e7;
+    border-bottom: 2px solid #e7e7e7;
+    padding: 10px 0;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+.iphone-details-price-container {
+    flex: 1;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iphone-details-price-box {
+    margin-bottom: 6px;
+    width: 260px;
+    height: 180px;
+    background-color: #f5f5f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.iphone-details-price {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.iphone-details-superscript {
+    font-size: 16px;
+    position: relative;
+    z-index: 9;
+    top: -0.4em;
+}
+
+.iphone-details-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.iphone-details-buttons a {
+    line-height: 1.25rem;
+    letter-spacing: -.4px;
+    border: 1px solid transparent;
+    border-radius: 22.5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.iphone-edit-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.iphone-add-accessory-button {
+    background-color: #000000;
+    padding: 9px 20.9px;
+}
+
+.iphone-edit-button {
+    background-color: #3498DB;
+    padding: 9px 30.6px;
+}
+
+.iphone-delete-button {
+    background-color: #E74C3C;
+    padding: 9px 18.08px;
+}
+
+.site-section.imac-accessories-container {
+    max-width: 1470px;
+    margin: 3em auto;
+    padding: 20px;
+    border: 2px solid #e7e7e7;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-section.imac-accessories-container h3 {
+    font-weight: 600;
+    line-height: 2.4rem;
+    letter-spacing: -.4px;
+    margin-bottom: 1rem;
+}
+
+.site-section.imac-accessories-container .imac-accessories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.imac-accessories-grid .imac-accessory-card {
+    width: 341.5px; 
+    height: 300px;
+    padding: 0.75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.imac-accessories-grid .imac-accessory-card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0.5em;
+}
+
+.imac-accessories-grid .imac-accessory-card h4 {
+    font-weight: 600;
+    letter-spacing: .004em;
+    line-height: 1.107;
+}
+
+.site-section.imac-accessories-container h3.imac-no-accessories {
+    margin: 3rem 0 4rem 0;
+}
