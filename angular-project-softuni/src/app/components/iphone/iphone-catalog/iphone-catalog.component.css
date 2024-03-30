@@ -1,0 +1,442 @@
+.section-content {
+    padding-top: 4.5em;
+    padding: 6em 5.8em 4em 5.8em;
+}
+
+.section-content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1D1D1F;
+}
+
+.section-content header h1 {
+    font-size: 4em;
+    font-weight: 600;
+    line-height: 4.2rem;
+    letter-spacing: -1.2px;
+}
+
+.section-content header p {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+    line-height: 1.6rem;
+    letter-spacing: .2px;
+}
+
+.site-section.welcome-section .welcome-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-section.welcome-section .welcome-video video {
+    width: 1632px;
+    height: 680px;
+    border-radius: 40px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.site-section.gtk {
+    padding: 9.35em 0 11.7em 0;
+}
+
+.site-section.gtk h1 {
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: -.3px;
+    padding-left: 5.8rem;
+    padding-bottom: 4rem;
+    color: #1D1D1F;
+}
+
+.site-section.gtk .gtk-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1em;
+    width: 1632px;
+    margin: 0 auto;
+}
+
+.site-section.gtk .gtk-card {
+    color: #F5F5F7;
+    width: 393px;
+    height: 770px;
+    border-radius: 27px;
+    padding: 1.6em;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .3s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.site-section.gtk .gtk-card:hover {
+    transform: scale(1.015);
+    text-decoration: none;
+}
+
+.site-section.gtk .gtk-card .gtk-title {
+    font-size: 0.85em;
+    line-height: 1.05rem;
+    letter-spacing: -.4px;
+}
+
+.site-section.gtk .gtk-card .gtk-description {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 1.4em;
+    line-height: 1.6rem;
+    letter-spacing: .2px;
+    margin-top: 0.4rem;
+}
+
+.site-section.gtk .gtk-card.battery,
+.site-section.gtk .gtk-card.innovation,
+.site-section.gtk .gtk-card.pyi,
+.site-section.gtk .gtk-card.privacy {
+    background-size: contain;
+    background-position: center;
+}
+
+.site-section.gtk .gtk-card.battery {
+    background-image: url("../../../../assets/images/apple-battery/battery-life.jpg");
+}
+
+.site-section.gtk .gtk-card.innovation {
+    background-image: url("../../../../assets/images/apple-iphone/iphone-tall.jpg");
+}
+
+.site-section.gtk .gtk-card.pyi {
+    background-image: url("../../../../assets/images/apple-iphone/personalize-your-iphone.jpg");
+}
+
+.site-section.gtk .gtk-card.privacy {
+    background-image: url("../../../../assets/images/apple-privacy/privacy-tall.jpg");
+}
+
+.site-section.iphone-catalog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(245, 245, 247);
+    padding-top: 7.5em;
+}
+
+.iphone-catalog-content {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1524px;
+    padding: 5em 0 2.45em 0;
+}
+
+.iphone-catalog-content h1 {
+    color: #1D1D1F;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: -.3px;
+    padding-bottom: 4rem;
+    margin-top: -10px;
+}
+
+.ic-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 12px;
+    row-gap: 16px;
+    width: 1524px;
+    margin: 0 auto;
+}
+
+.ic-card-container {
+    width: 372px;
+    padding: 5px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.ic-card-container:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.ic-card-image {
+    width: 216px;
+    height: 288px;
+    display: block;
+    margin-bottom: 2em;
+}
+
+.ic-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ic-card-info h4 {
+    font-weight: 600;
+    line-height: 1.6rem;
+    margin-bottom: 0.7rem;
+    letter-spacing: .2px;
+}
+
+.ic-card-info p,
+.ic-card-info span {
+    font-family: "SF Pro Text", sans-serif;
+    text-decoration: none;
+    color: #1D1D1F;
+    font-size: 0.85rem;
+    margin-top: 0.6rem;
+    line-height: 1.25rem;
+    letter-spacing: -.4px;
+}
+
+.ic-card-info p {
+    font-weight: 300;
+}
+
+.ic-card-info span {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.ic-card-info span .ic-card-superscript {
+    font-size: 0.7rem;
+    position: relative;
+    z-index: 9;
+    top: -0.4em;
+}
+
+.ic-card-info .ic-buttons {
+    margin: 1.9em 0 2.7em 0;
+}
+
+.ic-buttons a {
+    font-family: "SF Pro Text", sans-serif;
+    font-size: 0.85rem;
+    line-height: 1rem;
+    letter-spacing: -.4px;
+}
+
+.ic-buttons .ic-learn-more {
+    padding: 0.6rem 1.5rem;
+    background-color: #0071E3;
+    color: #ffffff;
+    border-radius: 20px;
+    margin-right: 1.45rem;
+    text-decoration: none;
+}
+
+.ic-buttons .ic-learn-more:hover {
+    background-color: #0077ED;
+}
+
+.ic-buttons .ic-buy {
+    color: #0066CC;
+}
+
+.ic-no-products h1 {
+    color: #1D1D1F;
+    display: block;
+    margin-top: 5.75rem;
+    margin-bottom: 3.75rem;
+    line-height: 3rem;
+    letter-spacing: -.3px;
+}
+
+.site-section.gt {
+    background-color: rgb(245, 245, 247);
+    padding-top: 10em;
+}
+
+.site-section.gt .gt-content,
+.site-section.ie .ie-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1632px;
+    margin: 0 auto;
+    padding-bottom: 4.5rem;
+}
+
+.site-section.gt .gt-content {
+    padding-bottom: 0;
+}
+
+.site-section.gt .gt-content header h1,
+.site-section.ie .ie-content header h1 {
+    color: #1D1D1F;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: -.3px;
+    padding-bottom: 4.5rem;
+}
+
+.site-section.gt .gt-content header,
+.site-section.ie .ie-content header {
+    align-self: flex-start;
+}
+
+.site-section.gt .gt-content .gt-image-container {
+    background-image: url("../../../../assets/images/apple-banners/guided-tour-long.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 1632px;
+    height: 580px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    transition: transform .3s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.site-section.gt .gt-content .gt-image-container:hover {
+    transform: scale(1.005);
+    cursor: pointer;
+}
+
+.gt-image-container p.gt-image-text {
+    display: flex;
+    font-family: "SF Pro Display", sans-serif;
+    color: #F5F5F7;
+    font-size: 1.6em;
+    font-weight: 600;
+    line-height: 1.8rem;
+    letter-spacing: .1px;
+    text-align: center;
+    padding-left: 7rem;
+}
+
+.site-section.iphone-why-apple {
+    background-color: #f5f5f7;
+    padding: 7.5em 0;
+}
+
+.site-section.iphone-why-apple .iphone-why-apple-content {
+    width: 1632px;
+    margin: 0 auto;
+}
+
+.site-section.iphone-why-apple .iphone-why-apple-content header h1 {
+    color: #1D1D1F;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: -.3px;
+    padding-bottom: 4.5rem;
+}
+
+.iphone-why-apple-content .iphone-why-apple-flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1632px;
+    gap: 1em;
+}
+
+.iphone-why-apple-flexbox .iphone-why-apple-card {
+    width: 393px;
+    height: 300px;
+    background-color: #ffffff;
+    padding: 1.6em;
+    border-radius: 25px;
+}
+
+.trade-in-iphone-image,
+.apple-card-iphone-image,
+.phone-carrier-iphone-image,
+.shopping-iphone-image {
+    padding: 5px 0 17px 0;
+}
+
+.trade-in-iphone-image img,
+.apple-card-iphone-image img,
+.phone-carrier-iphone-image img,
+.shopping-iphone-image img {
+    height: 39px;
+}
+
+.trade-in-iphone-image img {
+    width: 42px;
+}
+
+.apple-card-iphone-image img {
+    width: 48px;
+}
+
+.phone-carrier-iphone-image img {
+    width: 42px;
+}
+
+.shopping-iphone-image img {
+    width: 38px;
+}
+
+.why-iphone-text {
+    color: #1d1d1f;
+}
+
+.why-iphone-text h4 {
+    line-height: 1.6rem;
+    letter-spacing: -.4px;
+    font-weight: 600;
+}
+
+.why-iphone-text p {
+    font-size: 0.85em;
+    line-height: 1.05rem;
+    letter-spacing: -.4px;
+    margin-top: 0.7em;
+}
+
+.site-section.ie .ie-content {
+    padding-top: 7.5em;
+}
+
+.ie-content .ie-accessories {
+    display: flex;
+    gap: 1em;
+}
+
+.ie-content .ie-accessories div {
+    background-color: #f5f5f7;
+    padding: 1.6em;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ie-content .ie-accessories h4 {
+    color: #1D1D1F;
+    font-weight: 600;
+    line-height: 1.6rem;
+    letter-spacing: .2px;
+    padding-top: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.ie-content .ie-accessories p {
+    color: #1D1D1F;
+    font-size: 0.85em;
+    font-weight: 300;
+    line-height: 1.05rem;
+    letter-spacing: -.4px;
+    padding-bottom: 3.7rem;
+}
+
+.ie-content .ie-accessories img {
+    width: calc(100% + 4.2em);
+    margin: -1.6em;
+}

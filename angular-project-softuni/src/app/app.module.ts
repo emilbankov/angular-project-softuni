@@ -8,6 +8,7 @@ import { ComponentsModule } from './components/components.module';
 import { UserModule } from './components/user/user.module';
 import { ErrorComponent } from './error/error.component';
 import { RouterModule } from '@angular/router';
+import { iPhoneModule } from './components/iphone/iphone.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     CoreModule,
     ComponentsModule,
+    iPhoneModule,
     UserModule,
     RouterModule,
     AppRoutingModule,
