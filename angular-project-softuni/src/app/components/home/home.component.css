@@ -218,6 +218,11 @@
     position: relative;
     top: -30px;
     margin-bottom: 0.4em;
+    cursor: pointer;
+}
+
+.site-section.movies-carousel .gallery {
+    pointer-events: none;
 }
 
 .gallery-cell {
