@@ -1,5 +1,4 @@
 .site-footer {
-    margin-top: auto;
     background-color: rgb(245, 245, 247);
     padding-top: 1em;
     padding-bottom: 0.85em;
@@ -68,7 +67,6 @@
 
 .footer-container ul li i {
     font-size: 0.8em;
-    padding-right: 0.3rem;
 }
 
 .footer-container p,
@@ -85,7 +83,7 @@
     height: 27px;
     overflow: hidden;
     text-indent: 300vw;
-    background-image: url("/images/apple-logo/apple-logo-svg-footer.svg");
+    background-image: url("../../../assets/images/apple-logo/apple-logo-svg-footer.svg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

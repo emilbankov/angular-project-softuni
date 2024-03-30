@@ -29,10 +29,14 @@ body, table, input {
     font: inherit;
 }
 
-body {
+app-root {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+app-footer {
+    margin-top: auto;
 }
 
 a {
