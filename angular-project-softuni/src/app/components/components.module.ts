@@ -4,11 +4,13 @@ import { HomeComponent } from './home/home.component';
 import { ComponentsRoutingModule } from './components-routing,module';
 import { RouterModule } from '@angular/router';
 import { SupportComponent } from './support/support.component';
+import { AddProductsComponent } from './add-products/add-products.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     SupportComponent,
+    AddProductsComponent,
   ],
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { SupportComponent } from './support/support.component';
   exports: [
     HomeComponent,
     SupportComponent,
+    AddProductsComponent,
   ]
 })
 export class ComponentsModule { }

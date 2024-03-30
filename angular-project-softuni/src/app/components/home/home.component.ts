@@ -18,10 +18,6 @@ export class HomeComponent implements OnInit {
     const script = this.renderer.createElement('script');
     script.src = 'https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js';
     script.async = true;
-    script.onload = () => {
-      console.log('Flickity script loaded');
-      // this.initFlickity();
-    };
     this.renderer.appendChild(document.body, script);
   }
 
