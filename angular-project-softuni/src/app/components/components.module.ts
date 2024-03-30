@@ -1,21 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
-import { MainComponent } from './main/main.component';
-
-
+import { ComponentsRoutingModule } from './components-routing,module';
+import { RouterModule } from '@angular/router';
+import { SupportComponent } from './support/support.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    MainComponent
+    SupportComponent,
+    ErrorComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsRoutingModule,
+    RouterModule
   ],
   exports: [
     HomeComponent,
-    MainComponent
+    SupportComponent,
+    ErrorComponent,
   ]
 })
 export class ComponentsModule { }
