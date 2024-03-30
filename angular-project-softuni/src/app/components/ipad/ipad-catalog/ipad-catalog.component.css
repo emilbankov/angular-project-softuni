@@ -1,0 +1,925 @@
+div.grey {
+    background-color: #f5f5f7;
+}
+
+.site-section.ipad-pro {
+    background-color: #000000;
+    padding-top: 2.2em;
+}
+
+.ipad-section-content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.ipad-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ipad-pro-text {
+    flex-basis: 25%;
+    color: #ffffff;
+    z-index: 10;
+}
+
+.ipad-pro-image {
+    flex-basis: 75%;
+}
+
+.ipad-pro-image figure.image-ipad-pro {
+    width: 1058px;
+    height: 820px;
+    background-image: url("../../../../assets/images/apple-ipad/ipad-pro.jpg");
+    background-size: 1058px 820px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -510px;
+}
+
+.ipad-pro-text h1,
+.ipad-10-9-text h1,
+.site-section.ipad-essentials .ipad-section-content h1,
+.site-section.promo-section .ipad-section-content h1,
+.site-section.section-get-more .ipad-section-content h1 {
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: -.3px;
+    text-align: center;
+}
+
+.ipad-pro-text p,
+.ipad-10-9-text p {
+    font-family: "SF Pro Display", sans-serif;
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: .2px;
+    text-align: center;
+}
+
+.ipad-pro-text figure.m2-chip {
+    width: 62px;
+    height: 63px;
+    background-image: url("../../../../assets/images/apple-ipad/m2-chip.png");
+    background-size: 62px 63px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    margin-top: -0.25em;
+}
+
+.site-section.ipad-10-9 {
+    background-color: #ffffff;
+    padding: 1em;
+}
+
+.ipad-10-9-text {
+    color: #1D1D1F;
+    z-index: 10;
+}
+
+.ipad-10-9-text p {
+    display: block;
+    margin: 0;
+}
+
+.ipad-10-9-image {
+    flex-basis: 50%;
+    margin-left: -28px;
+}
+
+.ipad-10-9-image figure.image-ipad-10-9 {
+    width: 638px;
+    height: 731px;
+    background-image: url("../../../../assets/images/apple-ipad/ipads.jpg");
+    background-size: 638px 731px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -195px;
+}
+
+.site-section.ipad-catalog,
+.site-section.apple-pros {
+    margin: 1.5em auto;
+    padding: 0 1.5em;
+    max-width: 1440px;
+}
+
+.ipad-catalog-content {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1380px;
+    padding: 5em 0 2.45em 0;
+}
+
+.ipad-catalog-content h1 {
+    color: #1D1D1F;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: -.6px;
+    padding-bottom: 4rem;
+}
+
+.ipad-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 14px;
+    row-gap: 10px;
+    width: 1380px;
+    margin: 0 auto;
+}
+
+.ipad-card-container {
+    width: 450px;
+    padding: 5px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.ipad-card-container:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.ipad-card-image {
+    width: 216px;
+    height: 288px;
+    display: block;
+    margin-bottom: 2em;
+}
+
+.ipad-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ipad-card-info h4 {
+    font-weight: 600;
+    line-height: 1.6rem;
+    margin-bottom: 0.7rem;
+    letter-spacing: .2px;
+}
+
+.ipad-card-info p,
+.ipad-card-info span {
+    font-family: "SF Pro Text", sans-serif;
+    text-decoration: none;
+    color: #1D1D1F;
+    font-size: 0.85rem;
+    margin-top: 0.6rem;
+    line-height: 1.25rem;
+    letter-spacing: -.4px;
+}
+
+.ipad-card-info p {
+    font-weight: 300;
+    width: 190px;
+    height: 75px;
+    text-align: center;
+}
+
+.ipad-card-info span {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.ipad-card-info span .ipad-card-superscript {
+    font-size: 0.7rem;
+    position: relative;
+    z-index: 9;
+    top: -0.4em;
+}
+
+.ipad-card-info .ipad-buttons {
+    margin: 1.9em 0 2.7em 0;
+}
+
+.ipad-buttons a {
+    font-family: "SF Pro Text", sans-serif;
+    font-size: 0.85rem;
+    line-height: 1rem;
+    letter-spacing: -.4px;
+}
+
+.ipad-buttons .ipad-learn-more {
+    padding: 0.6rem 1.5rem;
+    background-color: #0071E3;
+    color: #ffffff;
+    border-radius: 20px;
+    margin-right: 1.45rem;
+    text-decoration: none;
+}
+
+.ipad-buttons .ipad-learn-more:hover {
+    background-color: #0077ED;
+}
+
+.ipad-buttons .ipad-buy {
+    color: #0066CC;
+}
+
+.ipad-no-products h1 {
+    color: #1D1D1F;
+    display: block;
+    margin-top: 5.75rem;
+    margin-bottom: 3.75rem;
+    line-height: 3rem;
+    letter-spacing: -.3px;
+}
+
+.apple-services .daily-cash,
+.apple-services .trade-in-ipad {
+    background-color: #ffffff;
+}
+
+.apple-services {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.daily-cash {
+    flex-basis: 50%;
+}
+
+.trade-in-ipad {
+    flex-basis: 50%;
+}
+
+.apple-services-wrapper {
+    padding-top: 3em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.apple-services-text {
+    text-align: center;
+    color: #1D1D1F;
+}
+
+.apple-services-text h2,
+.ipad-accessories-text h2 {
+    line-height: 2.6rem;
+    letter-spacing: -.1px;
+    font-weight: 600;
+}
+
+.apple-services-text p {
+    font-family: "SF Pro Display", sans-serif;
+    line-height: 1.45rem;
+    letter-spacing: .2px;
+    margin-top: 1.05rem;
+}
+
+.apple-services-wrapper figure.daily-cash {
+    width: 635px;
+    height: 340px;
+    background-image: url("../../../../assets/images/apple-card/daily-cash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin: 5em 0 0 -15em;
+}
+
+.apple-services-wrapper .trade-in-ipad-image {
+    margin-top: 1.95em;
+}
+
+.apple-services-wrapper figure.image-trade-in-ipad {
+    width: 311px;
+    height: 349px;
+    background-image: url("../../../../assets/images/apple-trade-in/trade-in-ipads.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin: 0 0 0 -155.5px;
+}
+
+.site-section.buystrip {
+    padding-top: 5em;
+}
+
+.three-tiles {
+    display: flex;
+    justify-content: space-around;
+}
+
+.three-tiles div {
+    text-align: center;
+}
+
+.buystrip-ffd figure.carton-box,
+.buystrip-apr figure.coin,
+.buystrip-apt figure.personalize {
+    margin-bottom: 0.6em;
+}
+
+.buystrip-ffd figure.carton-box {
+    width: 51px;
+    height: 75px;
+    background-image: url("../../../../assets/images/figures/carton-box.png");
+    background-size: 51px 75px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -25.5px;
+}
+
+.buystrip-apr figure.coin {
+    width: 55px;
+    height: 75px;
+    background-image: url("../../../../assets/images/figures/coin.png");
+    background-size: 55px 75px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -27.5px;
+}
+
+.buystrip-apt figure.personalize {
+    width: 55px;
+    height: 75px;
+    background-image: url("../../../../assets/images/figures/personalize.png");
+    background-size: 55px 75px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -27.5px;
+}
+
+.buystrip-ffd p,
+.buystrip-apr p,
+.buystrip-apt p,
+.ipad-accessories-text p {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 1.05em;
+    line-height: 1.45rem;
+    letter-spacing: 0.2px;
+    color: #1D1D1F;
+}
+
+.buystrip-ffd p.buystrip-headline,
+.buystrip-apr p.buystrip-headline,
+.buystrip-apt p.buystrip-headline {
+    font-weight: 600;
+}
+
+.site-section.ipad-essentials {
+    padding-top: 5.2em;
+}
+
+.site-section.ipad-essentials .ipad-accessories {
+    max-width: 1440px;
+    padding: 0 30px;
+    margin: 3.5em auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.apple-pencil,
+.ipad-keyboard,
+.ipad-all-accessories {
+    background-color: #ffffff;
+    padding: 0 2.875em;
+}
+
+.ipad-accessories .pencil-keyboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    width: 100%;
+}
+
+.ipad-accessories .ipad-all-accessories {
+    width: 100%;
+}
+
+.ipad-accessories .pencil-keyboard .apple-pencil {
+    flex-basis: 50%;
+}
+
+.ipad-accessories .pencil-keyboard .ipad-keyboard {
+    flex-basis: 50%;
+}
+
+.ipad-accessories-text {
+    padding: 3em 0;
+    text-align: center;
+}
+
+.ipad-keyboard .ipad-accessories-text {
+    padding-top: 0;
+    padding-bottom: 3em;
+}
+
+.apple-pencil figure.pencil-image {
+    width: calc(675px + 5.75em);
+    height: 373px;
+    background-image: url("../../../../assets/images/figures/apple-pencil.jpg");
+    background-size: 675px 373px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -337.5px;
+}
+
+.ipad-keyboard figure.keyboard-image {
+    width: calc(675px + 5.75em);
+    height: 434px;
+    background-image: url("../../../../assets/images/figures/ipad-keyboard.jpg");
+    background-size: 675px 434px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -337.5px;
+}
+
+.ipad-all-accessories figure.all-accessories-image {
+    width: calc(1057px + 5.75em);
+    height: 432px;
+    background-image: url("../../../../assets/images/figures/all-accessories.jpg");
+    background-size: 1057px 432px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -528.5px;
+}
+
+.site-section.promo-section {
+    padding-top: 7em;
+}
+
+.site-section.promo-section .ipad-promo-section {
+    max-width: 1440px;
+    width: auto;
+    padding: 0 1.5em;
+    margin: 3.5em auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.site-section.promo-section h2 {
+    font-weight: 600;
+    line-height: 2.6rem;
+    letter-spacing: -.1px;
+}
+
+.site-section.promo-section p {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 1.05em;
+    line-height: 1.45rem;
+    letter-spacing: .2px;
+    margin-top: 0.84rem;
+}
+
+.ipad-promo-section .why-ipad,
+.ipad-promo-section .fcp-lp,
+.ipad-promo-section .icloud-apple-pay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ipad-promo-section .why-ipad {
+    padding-top: 1.45em;
+    background-color: #ffffff;
+}
+
+.why-ipad .why-ipad-text {
+    color: #1d1d1f;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.why-ipad .why-ipad-image {
+    flex-basis: 50%;
+}
+
+.why-ipad .why-ipad-image figure.image-wi {
+    width: 692px;
+    height: 468px;
+    background-image: url("../../../../assets/images/figures/why-ipad.jpg");
+    background-size: 692px 468px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -398px;
+}
+
+.ipad-promo-section .fcp-lp {
+    background-color: #000000;
+    padding: 4.65em 0;
+    overflow: hidden;
+}
+
+.fcp-lp .fcp-lp-text {
+    color: #f5f5f7;
+    text-align: center;
+    flex-basis: 50%;
+    order: 2;
+}
+
+.fcp-lp .final-cut-image {
+    flex-basis: 25%;
+    order: 1;
+}
+
+.final-cut-image figure.final-cut-pro {
+    width: 596px;
+    height: 457px;
+    background-image: url("../../../../assets/images/figures/final-cut-pro.png");
+    background-size: 596px 457px;
+    background-repeat: no-repeat;
+    position: relative;
+    right: 50%;
+    margin-right: -170px;
+}
+
+.fcp-lp .logic-image {
+    flex-basis: 25%;
+    order: 3;
+}
+
+.logic-image figure.logic-pro {
+    width: 596px;
+    height: 457px;
+    background-image: url("../../../../assets/images/figures/logic-pro.png");
+    background-size: 596px 457px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -170px;
+}
+
+.ipad-promo-section .ios-17 {
+    width: 100%;
+    height: 638px;
+    background-image: url("../../../../assets/images/figures/ipados-17.jpg");
+    background-size: 1380px 638px;
+    background-repeat: no-repeat;
+    padding: 0 2.875em;
+}
+
+.ios-17 .ios-17-text {
+    max-width: 66%;
+    padding-top: 3.5em;
+    margin: 0 auto;
+    text-align: center;
+    color: #1d1d1f;
+}
+
+.ipad-promo-section .icloud-apple-pay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.icloud-apple-pay .icloud,
+.icloud-apple-pay .apple-pay {
+    background-color: #ffffff;
+    flex-basis: 50%;
+    max-width: 675px;
+    padding: 0 2.875em;
+}
+
+.icloud-apple-pay .icloud-text,
+.icloud-apple-pay .apple-pay-text {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 3em;
+    text-align: center;
+    color: #1d1d1f;
+}
+
+.icloud-image figure.image-icloud {
+    width: 594px;
+    height: 280px;
+    background-image: url("../../../../assets/images/figures/icloud.jpg");
+    background-size: 594px 280px;
+    background-repeat: no-repeat;
+    float: right;
+    margin: 41px -22px 49px 0;
+}
+
+.apple-pay-text h2 {
+    width: 114px;
+    height: 46px;
+    background-image: url("../../../../assets/images/figures/apple-pay-logo.png");
+    background-size: 114px 46px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -57px;
+    margin-top: 0.3rem;
+}
+
+.apple-pay-image figure.image-apple-pay {
+    width: 388px;
+    height: 281px;
+    background-image: url("../../../../assets/images/figures/apple-pay.jpg");
+    background-size: 388px 281px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    margin: 1.9em 0 2.55em -9.7em;
+}
+
+.site-section.section-get-more {
+    padding-top: 7em;
+    color: #1d1d1f;
+}
+
+.site-section.section-get-more .get-more {
+    max-width: 1440px;
+    width: auto;
+    padding: 0 1.5em;
+    margin: 3.5em auto 0 auto;
+    margin-bottom: 1.5em;
+}
+
+.get-more .apple-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: 550px;
+}
+
+.apple-one .apple-one-image {
+    flex-basis: 58%;
+    width: 58%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.apple-one-image figure.image-apple-one {
+    width: 542px;
+    height: 329px;
+    background-image: url("../../../../assets/images/apple-one/apple-one.jpg");
+    background-size: 542px 329px;
+    background-repeat: no-repeat;
+    margin-top: 1.125em;
+    margin-right: -2.8em;
+}
+
+.apple-one-text-wrapper {
+    flex-basis: 42%;
+    max-width: 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.apple-one .apple-one-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.apple-one .apple-one-text h2 {
+    width: 317px;
+    height: 100px;
+    background-image: url("../../../../assets/images/apple-one/apple-one-logo.jpg");
+    background-size: 317px 100px;
+    background-repeat: no-repeat;
+}
+
+.apple-one .apple-one-text p {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 1.4em;
+    line-height: 1.6rem;
+    margin-top: 1.4rem;
+    font-weight: 600;
+}
+
+.get-more .get-more-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5em;
+    row-gap: 1.5em;
+    margin-top: 1.5em;
+    max-width: 1380px;
+}
+
+.get-more-grid .get-more-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.apple-tv-plus.get-more-card,
+.apple-music.get-more-card,
+.apple-and-education.get-more-card,
+.apple-at-work.get-more-card {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.apple-fitness-plus.get-more-card,
+.apple-arcade.get-more-card,
+.apple-news-plus.get-more-card,
+.apple-gift-card.get-more-card {
+    background-color: #ffffff;
+    color: #1d1d1f;
+}
+
+.apple-tv-plus-text,
+.apple-music-text,
+.apple-fitness-plus-text,
+.apple-arcade-text,
+.apple-news-plus-text,
+.apple-gift-card-text,
+.apple-and-education-text,
+.apple-at-work-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3em;
+}
+
+.apple-tv-plus-text h2,
+.apple-music-text h2,
+.apple-fitness-plus-text h2,
+.apple-arcade-text h2,
+.apple-news-plus-text h2,
+.apple-gift-card-text h2 {
+    width: 220px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.apple-tv-plus-text h2 { background-image: url("../../../../assets/images/apple-tv+/apple-tv-plus-logo.png"); }
+.apple-music-text h2 { background-image: url("../../../../assets/images/apple-music/apple-music-logo.svg"); background-size: 220px 40px; }
+.apple-fitness-plus-text h2{ background-image: url("../../../../assets/images/apple-fitness-plus/apple-fitness-logo.png"); }
+.apple-arcade-text h2{ background-image: url("../../../../assets/images/apple-arcade/apple-arcade-logo.png"); }
+.apple-news-plus-text h2{ background-image: url("../../../../assets/images/apple-news-plus/apple-news-plus-logo.png"); }
+.apple-gift-card-text h2{ background-image: url("../../../../assets/images/apple-gift-card/apple-gift-card-logo.png"); }
+
+.apple-and-education-text h2,
+.apple-at-work-text h2 {
+    line-height: 2.6rem;
+    letter-spacing: -.1px;
+    font-weight: 600;
+}
+
+.apple-tv-plus-text p,
+.apple-music-text p,
+.apple-fitness-plus-text p,
+.apple-arcade-text p,
+.apple-news-plus-text p,
+.apple-gift-card-text p,
+.apple-and-education-text p,
+.apple-at-work-text p {
+    font-family: "SF Pro Display", sans-serif;
+    margin-top: 1.25rem;
+    font-size: 1.05em;
+    line-height: 1.45rem;
+    letter-spacing: .2px;
+}
+
+.apple-tv-plus-images-1,
+.apple-tv-plus-images-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+    max-width: 675px;
+    overflow: hidden;
+}
+
+.apple-tv-plus-images-1 {
+    margin-bottom: 0.6em;
+    margin-top: 3.475em;
+}
+
+.apple-tv-plus-images-2 {
+    margin-bottom: 3.475em;
+}
+
+.apple-tv-plus-images-2 .overflow-hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+    width: 886px;
+}
+
+.apple-tv-plus-images-1 figure,
+.apple-tv-plus-images-2 figure {
+    width: 209px;
+    height: 135px;
+    background-size: 209px 135px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.apple-tv-plus-images-1 figure.image-apple-tv-plus-1 { background-image: url("../../../../assets/images/apple-tv+/manhunt.jpg"); }
+.apple-tv-plus-images-1 figure.image-apple-tv-plus-2 { background-image: url("../../../../assets/images/apple-tv+/hijack.jpg"); border: 1px solid #272727; }
+.apple-tv-plus-images-1 figure.image-apple-tv-plus-3 { background-image: url("../../../../assets/images/apple-tv+/killers-of-the-flower-moon.jpg"); }
+.apple-tv-plus-images-2 figure.image-apple-tv-plus-4 { background-image: url("../../../../assets/images/apple-tv+/napoleon.jpg"); }
+.apple-tv-plus-images-2 figure.image-apple-tv-plus-5 { background-image: url("../../../../assets/images/apple-tv+/ghosted.jpg"); }
+.apple-tv-plus-images-2 figure.image-apple-tv-plus-6 { background-image: url("../../../../assets/images/apple-tv+/monarch.jpg"); }
+.apple-tv-plus-images-2 figure.image-apple-tv-plus-7 { background-image: url("../../../../assets/images/apple-tv+/the-bloody-hundreth.jpg"); }
+
+.apple-music-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+    max-width: 675px;
+    margin-top: 2.725em;
+}
+
+.apple-music-images figure {
+    background-repeat: no-repeat;
+    border: 2px solid #272727;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.apple-music-images figure.image-apple-music-1,
+.apple-music-images figure.image-apple-music-3 {
+    width: 190px;
+    height: 270px;
+    background-image: url("../../../../assets/images/apple-music/loe-shimmy.jpg");
+    background-size: 190px 270px;
+}
+
+.apple-music-images figure.image-apple-music-2 {
+    width: 247px;
+    height: 312px;
+    background-image: url("../../../../assets/images/apple-music/cody-jinks.jpg");
+    background-size: 247px 312px;
+}
+
+.apple-music-images figure.image-apple-music-3 {
+    background-image: url("../../../../assets/images/apple-music/gary-clark-jr.jpg");
+}
+
+.apple-fitness-plus-image figure.image-apple-fitness-plus,
+.apple-arcade-image figure.image-apple-arcade,
+.apple-news-plus-image figure.image-apple-news-plus,
+.apple-gift-card-image figure.image-apple-gift-card {
+    width: 675px;
+    height: 421px;
+    background-size: 675px 421px;
+    background-repeat: no-repeat;
+}
+
+.apple-fitness-plus-image figure.image-apple-fitness-plus { background-image: url("../../../../assets/images/apple-fitness-plus/apple-fitness-plus.png"); }
+.apple-arcade-image figure.image-apple-arcade { background-image: url("../../../../assets/images/apple-arcade/apple-arcade.png"); }
+.apple-news-plus-image figure.image-apple-news-plus { background-image: url("../../../../assets/images/apple-news-plus/apple-news-plus.jpg"); }
+
+.apple-gift-card-image figure.image-apple-gift-card {
+    background-image: url("../../../../assets/images/apple-gift-card/apple-gift-card.png");
+    background-size: 675px 319px;
+    background-position: center;
+    margin-top: 29px;
+}
+
+.apple-and-education.get-more-card,
+.apple-at-work.get-more-card {
+    width: 675px;
+    height: 604px;
+    background-size: 675px 604px;
+    background-repeat: no-repeat;
+}
+
+.apple-and-education.get-more-card { background-image: url("../../../../assets/images/figures/apple-and-education.jpg"); }
+.apple-at-work.get-more-card { background-image: url("../../../../assets/images/figures/apple-at-work.jpg"); }
