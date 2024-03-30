@@ -9,6 +9,7 @@ import { UserModule } from './components/user/user.module';
 import { ErrorComponent } from './error/error.component';
 import { RouterModule } from '@angular/router';
 import { iPhoneModule } from './components/iphone/iphone.module';
+import { iMacModule } from './components/imac/imac.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { iPhoneModule } from './components/iphone/iphone.module';
     CoreModule,
     ComponentsModule,
     iPhoneModule,
+    iMacModule,
     UserModule,
     RouterModule,
     AppRoutingModule,
