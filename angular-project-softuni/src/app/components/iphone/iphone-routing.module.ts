@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { iPhoneCatalogComponent } from './iphone-catalog/iphone-catalog.component';
-import { iPhoneEditComponent } from './iphone-edit/iphone-edit.component';
 import { iPhoneDetailsComponent } from './iphone-details/iphone-details.component';
 import { iPhoneAttachAccessoryComponent } from './iphone-attach-accessory/iphone-attach-accessory.component';
+import { iPhoneEditComponent } from './iphone-edit/iphone-edit.component';
 
 const routes: Routes = [
     {
