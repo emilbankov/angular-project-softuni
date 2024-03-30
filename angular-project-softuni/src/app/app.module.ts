@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { ComponentsModule } from './components/components.module';
 import { UserModule } from './components/user/user.module';
 import { ErrorComponent } from './error/error.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ErrorComponent } from './error/error.component';
     CoreModule,
     ComponentsModule,
     UserModule,
+    RouterModule,
     AppRoutingModule,
   ],
   providers: [],
