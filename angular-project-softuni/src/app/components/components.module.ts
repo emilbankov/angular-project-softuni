@@ -5,12 +5,14 @@ import { ComponentsRoutingModule } from './components-routing,module';
 import { RouterModule } from '@angular/router';
 import { SupportComponent } from './support/support.component';
 import { AddProductsComponent } from './add-products/add-products.component';
+import { AddAccessoriesComponent } from './add-accessories/add-accessories.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     SupportComponent,
     AddProductsComponent,
+    AddAccessoriesComponent,
   ],
   imports: [
     CommonModule,
@@ -21,6 +23,7 @@ import { AddProductsComponent } from './add-products/add-products.component';
     HomeComponent,
     SupportComponent,
     AddProductsComponent,
+    AddAccessoriesComponent,
   ]
 })
 export class ComponentsModule { }
