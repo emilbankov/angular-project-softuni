@@ -35,7 +35,8 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/scripts/show-form.js"
+              "src/assets/scripts/show-form.js",
+              "src/assets/scripts/video.js"
             ]
           },
           "configurations": {
