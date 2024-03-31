@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { iMacModule } from './components/imac/imac.module';
 import { iPadModule } from './components/ipad/ipad.module';
 import { iPhoneModule } from './components/iphone/iphone.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { iPhoneModule } from './components/iphone/iphone.module';
     iPadModule,
     iPhoneModule,
     UserModule,
+    HttpClientModule,
     RouterModule,
     AppRoutingModule,
   ],
