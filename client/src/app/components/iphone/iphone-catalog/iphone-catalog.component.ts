@@ -13,7 +13,7 @@ export class iPhoneCatalogComponent implements OnInit {
   constructor(private api: ApiService) {}
 
   ngOnInit(): void {
-    this.api.getIphones().subscribe((iphones) => {
+    this.api.getAllIphones().subscribe((iphones) => {
       this.iphones = iphones;
     })
   }

@@ -1,42 +1,42 @@
 <section class="site-section iphone-details-container">
     <div class="iphone-details-product">
         <div class="iphone-details-image">
-            <img src="../../../../assets/images/catalog/iphones/iphone-15-pro-max.png">
+            <img src="{{ iphone.imageUrl }}">
         </div>
         <div class="iphone-details">
-            <h3>iPhone 15 Pro Max</h3>
+            <h3>{{ iphone.name }}</h3>
             <div class="iphone-details-list-content">
                 <ul class="iphone-details-list">
                     <li>
                         <strong>Color:</strong>
-                        <p>Black Titanium</p>
+                        <p>{{ iphone.color }}</p>
                     </li>
                     <li>
                         <strong>Display:</strong>
-                        <p>6.7-inch</p>
+                        <p>{{ iphone.display }}-inch</p>
                     </li>
                     <li>
                         <strong>Storage:</strong>
-                        <p>128 GB</p>
+                        <p>{{ iphone.storage }} GB</p>
                     </li>
                     <li>
                         <strong>Battery Life:</strong>
-                        <p>Up to 29 hours video playback</p>
+                        <p>{{ iphone.batteryLife }}</p>
                     </li>
                 </ul>
             </div>
             <div class="iphone-details-description">
-                <p>The pro max experience.</p>
+                <p>{{ iphone.description }}</p>
             </div>
         </div>
         <div class="iphone-details-price-container">
             <div class="iphone-details-price-box">
-                <span class="iphone-details-price">$1199<span class="iphone-details-superscript">,99</span></span>
+                <span class="iphone-details-price">${{ iphone.price && iphone.price.split(",")[0] }}<span class="iphone-details-superscript">,{{ iphone.price && iphone.price.split(",")[1] }}</span></span>
             </div>
             <div class="iphone-details-buttons">
-                <a class="iphone-add-accessory-button" routerLink="/iphone-catalog/iphone-attach-accessory">Attach accessory</a>
+                <a class="iphone-add-accessory-button" routerLink="/iphone-catalog/iphone-attach-accessory/{{ iphone._id }}">Attach accessory</a>
                 <div class="iphone-edit-delete">
-                    <a class="iphone-edit-button" routerLink="/iphone-catalog/iphone-edit">Edit</a>
+                    <a class="iphone-edit-button" routerLink="/iphone-catalog/iphone-edit/{{ iphone._id }}">Edit</a>
                     <a class="iphone-delete-button">Delete</a>
                 </div>
             </div>

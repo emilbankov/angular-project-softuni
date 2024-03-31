@@ -11,8 +11,8 @@ const routes: Routes = [
         children: [
             { path: '', pathMatch: 'full', component: iPhoneCatalogComponent },
             { path: 'iphone-details/:iphoneId', component: iPhoneDetailsComponent },
-            { path: 'iphone-attach-accessory:iphoneId', component: iPhoneAttachAccessoryComponent },
-            { path: 'iphone-edit:iphoneId', component: iPhoneEditComponent },
+            { path: 'iphone-attach-accessory/:iphoneId', component: iPhoneAttachAccessoryComponent },
+            { path: 'iphone-edit/:iphoneId', component: iPhoneEditComponent },
         ]
     },
 ];
