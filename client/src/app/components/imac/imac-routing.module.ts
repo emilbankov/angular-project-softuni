@@ -10,9 +10,9 @@ const routes: Routes = [
         path: 'imac-catalog',
         children: [
             { path: '', pathMatch: 'full', component: iMacCatalogComponent },
-            { path: 'imac-details', component: iMacDetailsComponent },
-            { path: 'imac-attach-accessory', component: iMacAttachAccessoryComponent },
-            { path: 'imac-edit', component: iMacEditComponent },
+            { path: 'imac-details/:imacId', component: iMacDetailsComponent },
+            { path: 'imac-attach-accessory/:imacId', component: iMacAttachAccessoryComponent },
+            { path: 'imac-edit/:imacId', component: iMacEditComponent },
         ]
     },
 ];

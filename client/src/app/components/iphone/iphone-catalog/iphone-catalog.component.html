@@ -57,8 +57,8 @@
                         <p class="ic-card-description">{{ iphone.description }}</p>
                         <span class="ic-card-price">${{ iphone.price.split(",")[0] }}<span class="ic-card-superscript">,{{ iphone.price.split(",")[1] }}</span></span>
                         <div class="ic-buttons">
-                            <a class="ic-learn-more" routerLink="/iphone-catalog/iphone-details">Learn more</a>
-                            <a class="ic-buy" routerLink="/iphone-catalog/iphone-details">Buy ></a>
+                            <a class="ic-learn-more" routerLink="/iphone-catalog/iphone-details/{{iphone._id}}">Learn more</a>
+                            <a class="ic-buy" routerLink="/iphone-catalog/iphone-details/{{iphone._id}}">Buy ></a>
                         </div>
                     </div>
                 </div>

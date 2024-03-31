@@ -40,8 +40,8 @@
                             <p class="ipad-card-description">{{ ipad.description }}</p>
                             <span class="ipad-card-pripade">${{ ipad.price.split(",")[0] }}<span class="ipad-card-superscript">,{{ ipad.price.split(",")[1] }}</span></span>
                             <div class="ipad-buttons">
-                                <a class="ipad-learn-more" routerLink="/ipad-catalog/ipad-details">Learn more</a>
-                                <a class="ipad-buy" routerLink="/ipad-catalog/ipad-details">Buy ></a>
+                                <a class="ipad-learn-more" routerLink="/ipad-catalog/ipad-details/{{ ipad._id }}">Learn more</a>
+                                <a class="ipad-buy" routerLink="/ipad-catalog/ipad-details/{{ ipad._id }}">Buy ></a>
                             </div>
                         </div>
                     </div>

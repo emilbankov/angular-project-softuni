@@ -10,9 +10,9 @@ const routes: Routes = [
         path: 'ipad-catalog',
         children: [
             { path: '', pathMatch: 'full', component: iPadCatalogComponent },
-            { path: 'ipad-details', component: iPadDetailsComponent },
-            { path: 'ipad-attach-accessory', component: iPadAttachAccessoryComponent },
-            { path: 'ipad-edit', component: iPadEditComponent },
+            { path: 'ipad-details/:ipadId', component: iPadDetailsComponent },
+            { path: 'ipad-attach-accessory/:ipadId', component: iPadAttachAccessoryComponent },
+            { path: 'ipad-edit/:ipadId', component: iPadEditComponent },
         ]
     },
 ];

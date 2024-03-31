@@ -10,9 +10,9 @@ const routes: Routes = [
         path: 'iphone-catalog',
         children: [
             { path: '', pathMatch: 'full', component: iPhoneCatalogComponent },
-            { path: 'iphone-details', component: iPhoneDetailsComponent },
-            { path: 'iphone-attach-accessory', component: iPhoneAttachAccessoryComponent },
-            { path: 'iphone-edit', component: iPhoneEditComponent },
+            { path: 'iphone-details/:iphoneId', component: iPhoneDetailsComponent },
+            { path: 'iphone-attach-accessory:iphoneId', component: iPhoneAttachAccessoryComponent },
+            { path: 'iphone-edit:iphoneId', component: iPhoneEditComponent },
         ]
     },
 ];

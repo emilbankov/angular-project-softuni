@@ -56,8 +56,8 @@
                         <p class="imac-card-description">{{ imac.description }}</p>
                         <span class="imac-card-primace">${{ imac.price.split(",")[0] }}<span class="imac-card-superscript">,{{ imac.price.split(",")[1] }}</span></span>
                         <div class="imac-buttons">
-                            <a class="imac-learn-more" routerLink="/imac-catalog/imac-details">Learn more</a>
-                            <a class="imac-buy" routerLink="/imac-catalog/imac-details">Buy ></a>
+                            <a class="imac-learn-more" routerLink="/imac-catalog/imac-details/{{ imac._id }}">Learn more</a>
+                            <a class="imac-buy" routerLink="/imac-catalog/imac-details/{{ imac._id }}">Buy ></a>
                         </div>
                     </div>
                 </div>
