@@ -1357,7 +1357,7 @@
             "iphone-15-pro-max": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "iPhone 15 Pro Max",
-                imageUrl: "https://www.proximus.be/dam/jcr:6ef44c11-8589-4f66-b2db-6e8bd0829cb4/cdn/sites/iportal/images/products/device/p/px-iphone-15-pro-max-256gb-nat-tit/detail/px-iphone-15-pro-max-256gb-nat-tit-XS-1~2023-09-14-11-04-49~cache.png",
+                imageUrl: "https://twigo.ru/center/iblock/69f/7s2k3g7jksfc2hbqaj5lxd10p2s52xvp/nxz54zajpkfqdpidnqn77eto69k0heem.jpeg",
                 color: "Black Titanium",
                 batteryLife: "Up to 27 hours video playback",
                 description: "The pro max experience.",
@@ -1372,7 +1372,7 @@
             "ipad-pro": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "iPad Pro",
-                imageUrl: "https://w7.pngwing.com/pngs/869/458/png-transparent-ipad-pro-thumbnail.png",
+                imageUrl: "https://www.apple.com/v/ipad/home/ci/images/overview/compare_ipad_pro__erf9x8mw04sy_large.png",
                 color: "Gold Titanium",
                 batteryLife: "Up to 24 hours video playback",
                 description: "The ultimate iPad experience with the most advanced technology.",
@@ -1386,11 +1386,11 @@
         imacs: {
             "imac-pro": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                name: "iMac Pro",
-                imageUrl: "https://w7.pngwing.com/pngs/869/458/png-transparent-ipad-pro-thumbnail.png",
+                name: "iMac",
+                imageUrl: "https://www.apple.com/v/mac/home/by/images/overview/select/product_tile_imac_24__inq0od011wuq_large.png",
                 cpu: "8-Core",
                 gpu: "10-Core",
-                description: "The most affordable Mac desktop with outsized performance.",
+                description: "A stunning all-in-one desktop for creativity and productivity.",
                 display: "27",
                 storage: "1024",
                 price: "5000,00",
