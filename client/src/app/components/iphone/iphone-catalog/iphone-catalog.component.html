@@ -45,17 +45,17 @@
 <section class="site-section iphone-catalog">
     <div class="iphone-catalog-content">
         <h1>Which iPhone is right for you?</h1>
-        <div class="ic-grid-container">
-            <div class="ic-card">
+        <div *ngIf="iphones && iphones.length > 0" class="ic-grid-container">
+            <div *ngFor="let iphone of iphones" class="ic-card">
                 <div class="ic-card-container">
                     <div class="ic-card-image-container">
-                        <img src="../../../../assets/images/catalog/iphones/iphone-15-pro-max.png" alt="Card"
+                        <img src="{{ iphone.imageUrl }}" alt="Card"
                             class="ic-card-image">
                     </div>
                     <div class="ic-card-info">
-                        <h4 class="ic-card-name">iPhone 15 Pro Max</h4>
-                        <p class="ic-card-description">The pro max experience.</p>
-                        <span class="ic-card-price">$1199<span class="ic-card-superscript">,99</span></span>
+                        <h4 class="ic-card-name">{{ iphone.name }}</h4>
+                        <p class="ic-card-description">{{ iphone.description }}</p>
+                        <span class="ic-card-price">${{ iphone.price.split(",")[0] }}<span class="ic-card-superscript">,{{ iphone.price.split(",")[1] }}</span></span>
                         <div class="ic-buttons">
                             <a class="ic-learn-more" routerLink="/iphone-catalog/iphone-details">Learn more</a>
                             <a class="ic-buy" routerLink="/iphone-catalog/iphone-details">Buy ></a>
@@ -63,6 +63,18 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="ic-card">
                 <div class="ic-card-container">
                     <div class="ic-card-image-container">
@@ -128,9 +140,9 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="ic-no-products">
+        <div *ngIf="!iphones || iphones.length === 0" class="ic-no-products">
             <h1>There are no products added yet.</h1>
-        </div> -->
+        </div>
     </div>
 </section>
 <section class="site-section gt">
