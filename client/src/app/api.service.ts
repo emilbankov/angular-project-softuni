@@ -12,8 +12,16 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  getIphones() {
+  getAllIphones() {
     return this.http.get<iPhone[]>(`${this.baseUrl}/iphones`);
+  }
+
+  getIphone(id: string) {
+    return this.http.get<iPhone>(`${this.baseUrl}/iphones/${id}`);
+  }
+
+  addIphone(name: string, imageUrl: string, color: string, batteryLife: string, description: string, display: string, storage: string, price: string) {
+    return this.http.post<iPhone>(`${this.baseUrl}/iphones`, { name, imageUrl, color, batteryLife, description, display, storage, price })
   }
 
   getIpads() {
