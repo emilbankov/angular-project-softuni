@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
+import { iMac } from 'src/app/types/imac';
 
 @Component({
   selector: 'app-imac-catalog',
@@ -7,18 +8,14 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./imac-catalog.component.css']
 })
 export class iMacCatalogComponent implements OnInit {
+  imacs: iMac[] | null = [];
 
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
     this.api.getImacs().subscribe((imacs) => {
-      console.log(imacs);
+      this.imacs = imacs;
     })
   }
 
-  // ngOnInit(): void {
-  //   this.api.getImacs().subscribe((imacs) => {
-  //     console.log(imacs);
-  //   })
-  // }
 }

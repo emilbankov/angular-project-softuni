@@ -45,16 +45,16 @@
 <section class="site-section imac-catalog">
     <div class="imac-catalog-content">
         <h1>Which Mac is right for you?</h1>
-        <div class="imac-grid-container">
-            <div class="imac-card">
+        <div *ngIf="imacs && imacs.length > 0" class="imac-grid-container">
+            <div *ngFor="let imac of imacs" class="imac-card">
                 <div class="imac-card-container">
                     <div class="imac-card-image-container">
-                        <img src="../../../../assets/images/catalog/imacs/imac.png" alt="Card" class="imac-card-image">
+                        <img src="{{ imac.imageUrl }}" alt="Card" class="imac-card-image">
                     </div>
                     <div class="imac-card-info">
-                        <h3 class="imac-card-name">iMac</h3>
-                        <p class="imac-card-description">A stunning all-in-one desktop for creativity and productivity.</p>
-                        <span class="imac-card-primace">$1299<span class="imac-card-superscript">,99</span></span>
+                        <h3 class="imac-card-name">{{ imac.name }}</h3>
+                        <p class="imac-card-description">{{ imac.description }}</p>
+                        <span class="imac-card-primace">${{ imac.price.split(",")[0] }}<span class="imac-card-superscript">,{{ imac.price.split(",")[1] }}</span></span>
                         <div class="imac-buttons">
                             <a class="imac-learn-more" routerLink="/imac-catalog/imac-details">Learn more</a>
                             <a class="imac-buy" routerLink="/imac-catalog/imac-details">Buy ></a>
@@ -62,6 +62,11 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+
             <div class="imac-card">
                 <div class="imac-card-container">
                     <div class="imac-card-image-container">
@@ -111,7 +116,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="imac-no-products">
+        <!-- <div *ngIf="!imacs || imacs.length === 0" class="imac-no-products">
             <h1>There are no products added yet.</h1>
         </div> -->
     </div>
