@@ -16,15 +16,15 @@
             <form class="form" id="iphone-form">
                 <span class="iphone-add-span">iPhone</span>
                 <h3>iPhone</h3>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Image URL">
-                <input type="text" placeholder="Color">
-                <input type="text" placeholder="Battery Life">
-                <input type="text" placeholder="Description">
-                <input type="number" placeholder="Display (inch)">
-                <input type="number" placeholder="Storage">
-                <input type="number" placeholder="Price">
-                <button>Add Product</button>
+                <input type="text" placeholder="Name" #inputName>
+                <input type="text" placeholder="Image URL" #inputImageUrl>
+                <input type="text" placeholder="Color" #inputColor>
+                <input type="text" placeholder="Battery Life" #inputBatteryLife>
+                <input type="text" placeholder="Description" #inputDescription>
+                <input type="number" placeholder="Display (inch)" #inputDisplay>
+                <input type="number" placeholder="Storage" #inputStorage>
+                <input type="number" placeholder="Price" #inputPrice>
+                <button (click)="addIphone($event, inputName.value, inputImageUrl.value, inputColor.value, inputBatteryLife.value, inputDescription.value, inputDisplay.value, inputStorage.value, inputPrice.value)">Add Product</button>
             </form>
             <form style="display: none;" class="form" id="ipad-form">
                 <span class="ipad-add-span">iPad</span>
