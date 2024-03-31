@@ -29,18 +29,16 @@
     <section class="site-section ipad-catalog">
         <div class="ipad-catalog-content">
             <h1>Which iPad is right for you?</h1>
-            <div class="ipad-grid-container">
-                <div class="ipad-card">
+            <div *ngIf="ipads && ipads.length > 0" class="ipad-grid-container">
+                <div *ngFor="let ipad of ipads" class="ipad-card">
                     <div class="ipad-card-container">
                         <div class="ipad-card-image-container">
-                            <img src="../../../../assets/images/catalog/ipads/ipad-pro.png" alt="Card" class="ipad-card-image">
+                            <img src="{{ ipad.imageUrl }}" alt="Card" class="ipad-card-image">
                         </div>
                         <div class="ipad-card-info">
-                            <h4 class="ipad-card-name">iPad Pro</h4>
-                            <p class="ipad-card-description">The ultimate iPad experience with the most advanced
-                                technology.</p>
-                            <span class="ipad-card-pripade">$799<span
-                                    class="ipad-card-superscript">,99</span></span>
+                            <h4 class="ipad-card-name">{{ ipad.name }}</h4>
+                            <p class="ipad-card-description">{{ ipad.description }}</p>
+                            <span class="ipad-card-pripade">${{ ipad.price.split(",")[0] }}<span class="ipad-card-superscript">,{{ ipad.price.split(",")[1] }}</span></span>
                             <div class="ipad-buttons">
                                 <a class="ipad-learn-more" routerLink="/ipad-catalog/ipad-details">Learn more</a>
                                 <a class="ipad-buy" routerLink="/ipad-catalog/ipad-details">Buy ></a>
@@ -48,6 +46,9 @@
                         </div>
                     </div>
                 </div>
+
+
+
                 <div class="ipad-card">
                     <div class="ipad-card-container">
                         <div class="ipad-card-image-container">
@@ -119,9 +120,9 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="ipad-no-products">
+            <div *ngIf="!ipads || ipads.length === 0" class="ipad-no-products">
             <h1>There are no products added yet.</h1>
-        </div> -->
+        </div>
         </div>
     </section>
     <section class="site-section apple-pros">
