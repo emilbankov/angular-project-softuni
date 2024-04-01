@@ -203,6 +203,8 @@
 
 .ic-card-info p {
     font-weight: 300;
+    height: 25px;
+    text-align: center;
 }
 
 .ic-card-info span {

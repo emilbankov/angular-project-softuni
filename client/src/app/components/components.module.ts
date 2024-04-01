@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { SupportComponent } from './support/support.component';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { AddAccessoriesComponent } from './add-accessories/add-accessories.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AddAccessoriesComponent } from './add-accessories/add-accessories.compo
   imports: [
     CommonModule,
     ComponentsRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HomeComponent,
