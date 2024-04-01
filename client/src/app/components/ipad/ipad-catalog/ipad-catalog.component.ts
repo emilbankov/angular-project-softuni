@@ -13,7 +13,7 @@ export class iPadCatalogComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getIpads().subscribe((ipads) => {
+    this.api.getAllIpads().subscribe((ipads) => {
       this.ipads = ipads;
     })
   }
