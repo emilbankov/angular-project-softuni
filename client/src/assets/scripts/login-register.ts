@@ -1,6 +1,6 @@
 import { Renderer2 } from '@angular/core';
 
-export function loginRegister(renderer: Renderer2): void {
+export function loginRegisterToggle(renderer: Renderer2): void {
   const container = document.getElementById('container');
   const registerBtn = document.getElementById('register');
   const loginBtn = document.getElementById('login');
