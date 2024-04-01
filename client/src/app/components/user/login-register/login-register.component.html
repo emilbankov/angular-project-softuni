@@ -4,21 +4,15 @@
         <form [formGroup]="form" (ngSubmit)="register()">
             <h3>Sign Up</h3>
             <input type="email" placeholder="Email" formControlName="email">
-            <ng-container *ngIf="email?.touched">
-                <div class="error-msg" *ngIf="isEmailRequired">Email is required!</div>
-                <div class="error-msg" *ngIf="isEmailValid">Email is invalid!</div>
-            </ng-container>
+            <div class="error-msg" *ngIf="email?.dirty && isEmailRequired">Email is required!</div>
+            <div class="error-msg" *ngIf="email?.dirty && isEmailValid">Email is invalid!</div>
 
             <ng-container formGroupName="passGroup">
                 <input type="password" placeholder="Password" formControlName="password">
-                <ng-container *ngIf="password?.touched">
-                    <div class="error-msg" *ngIf="isPasswordRequired">Password is required!</div>
-                </ng-container>
+                <div class="error-msg" *ngIf="password?.dirty && isPasswordRequired">Password is required!</div>
 
                 <input type="password" placeholder="Repeat Password" formControlName="rePassword">
-                <ng-container *ngIf="rePassword?.touched">
-                    <div class="error-msg" *ngIf="areMatching || isrePasswordRequired">Passwords don't match!</div>
-                </ng-container>
+                <div class="error-msg" *ngIf="rePassword?.dirty && (areMatching || isrePasswordRequired)">Passwords don't match!</div>
             </ng-container>
             <button class="white">Sign Up</button>
         </form>
