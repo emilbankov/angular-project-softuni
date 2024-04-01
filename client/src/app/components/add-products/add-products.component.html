@@ -109,6 +109,42 @@
 
                 <button >Add Product</button>
             </form>
+            <form style="display: none;" class="form" id="ipad-form" #form="ngForm" (ngSubmit)="addIpad(form)">
+                <span class="ipad-add-span">iPad</span>
+                <h3>iPad</h3>
+                <input type="text" name="name" placeholder="Name" ngModel #inputNameIpad="ngModel" required minlength="4" maxlength="20">
+                <div class="error-msg" *ngIf="inputNameIpad.dirty && inputNameIpad.errors?.['required']">Name is required!</div>
+                <div class="error-msg" *ngIf="inputNameIpad.dirty && inputNameIpad.errors?.['minlength']">Name must be between 4 and 20 charachters</div>
+
+                <input type="text" name="imageUrl" placeholder="Image URL" ngModel #inputImageUrlIpad="ngModel" required pattern="^https?:\/\/.+">
+                <div class="error-msg" *ngIf="inputImageUrlIpad.dirty && inputImageUrlIpad.errors?.['required']">Image URL is required!</div>
+                <div class="error-msg" *ngIf="inputImageUrlIpad.dirty && inputImageUrlIpad.errors?.['pattern']">Provide a valid Image URL!</div>
+
+                <input type="text" name="color" placeholder="Color" ngModel #inputColorIpad="ngModel" required minlength="3" maxlength="20">
+                <div class="error-msg" *ngIf="inputColorIpad.dirty && inputColorIpad.errors?.['required']">Color is required!</div>
+                <div class="error-msg" *ngIf="inputColorIpad.dirty && inputColorIpad.errors?.['minlength']">Color must be between 3 and 20 charachters</div>
+
+                <input type="number" name="batteryLife" placeholder="Battery Life" ngModel #inputBatteryLifeIpad="ngModel" required min="20" max="36">
+                <div class="error-msg" *ngIf="inputBatteryLifeIpad.dirty && inputBatteryLifeIpad.errors?.['required']">Battery Life is required!</div>
+                <div class="error-msg" *ngIf="inputBatteryLifeIpad.dirty && (inputBatteryLifeIpad.errors?.['min'] || inputBatteryLifeIpad.errors?.['max'])">Battery Life must be between 20 and 36 hours</div>
+                
+                <input type="text" name="description" placeholder="Description" ngModel #inputDescriptionIpad="ngModel" required minlength="10" maxlength="66">
+                <div class="error-msg" *ngIf="inputDescriptionIpad.dirty && inputDescriptionIpad.errors?.['required']">Description is required!</div>
+                <div class="error-msg" *ngIf="inputDescriptionIpad.dirty && inputDescriptionIpad.errors?.['minlength']">Description must be between 10 and 66 charachters</div>
+
+                <input type="number" name="display" placeholder="Display (inch)" ngModel #inputDisplayIpad="ngModel" required min="7.9" max="12.9">
+                <div class="error-msg" *ngIf="inputDisplayIpad.dirty && inputDisplayIpad.errors?.['required']">Display is required!</div>
+                <div class="error-msg" *ngIf="inputDisplayIpad.dirty && (inputDisplayIpad.errors?.['min'] || inputDisplayIpad.errors?.['max'])">Display size must be between 7.9 and 12.9 inches</div>
+
+                <input type="number" name="storage" placeholder="Storage" ngModel #inputStorageIpad="ngModel" required pattern="^(256|512|1024|2048)$">
+                <div class="error-msg" *ngIf="inputStorageIpad.dirty && inputStorageIpad.errors?.['required']">Storage is required!</div>
+                <div class="error-msg" *ngIf="inputStorageIpad.dirty && inputStorageIpad.errors?.['pattern']">Storage size must be 256, 512, 1024 or 2048 GB</div>
+
+                <input type="text" name="price" placeholder="Price" ngModel #inputPriceIpad="ngModel" required pattern="^\d{3,4},\d{2}$">
+                <div class="error-msg" *ngIf="inputPriceIpad.dirty && inputPriceIpad.errors?.['required']">Price is required!</div>
+                <div class="error-msg" *ngIf="inputPriceIpad.dirty && inputPriceIpad.errors?.['pattern']">Price must be e.g. xxx,xx or xxxx,xx</div>
+                <button>Add Product</button>
+            </form>
             
         </div>
     </div>
