@@ -12,6 +12,7 @@ import { iMacModule } from './components/imac/imac.module';
 import { iPadModule } from './components/ipad/ipad.module';
 import { iPhoneModule } from './components/iphone/iphone.module';
 import { HttpClientModule } from '@angular/common/http';
+import { appInterceptorProvider } from './app.interceptor';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
