@@ -1,42 +1,42 @@
 <section class="site-section ipad-details-container">
     <div class="ipad-details-product">
         <div class="ipad-details-image">
-            <img src="../../../../assets/images/catalog/ipads/ipad-pro.png">
+            <img src="{{ ipad.imageUrl }}">
         </div>
         <div class="ipad-details">
-            <h3>iPad Pro</h3>
+            <h3>{{ ipad.name }}</h3>
             <div class="ipad-details-list-content">
                 <ul class="ipad-details-list">
                     <li>
                         <strong>Color:</strong>
-                        <p>Space Grey</p>
+                        <p>{{ ipad.color }}</p>
                     </li>
                     <li>
                         <strong>Display:</strong>
-                        <p>12.9-inch</p>
+                        <p>{{ ipad.display }}-inch</p>
                     </li>
                     <li>
                         <strong>Storage:</strong>
-                        <p>256 GB</p>
+                        <p>{{ ipad.storage }} GB</p>
                     </li>
                     <li>
                         <strong>Battery Life:</strong>
-                        <p>Up to 24 hours video playback</p>
+                        <p>{{ ipad.batteryLife }}</p>
                     </li>
                 </ul>
             </div>
             <div class="ipad-details-description">
-                <p>The ultimate iPad experience with the most advanced technology.</p>
+                <p>{{ ipad.description }}</p>
             </div>
         </div>
         <div class="ipad-details-price-container">
             <div class="ipad-details-price-box">
-                <span class="ipad-details-price">$1099<span class="ipad-details-superscript">,99</span></span>
+                <span class="ipad-details-price">${{ ipad.price && ipad.price.split(",")[0] }}<span class="ipad-details-superscript">,{{ ipad.price && ipad.price.split(",")[1] }}</span></span>
             </div>
             <div class="ipad-details-buttons">
-                <a class="ipad-add-accessory-button" routerLink="/ipad-catalog/ipad-attach-accessory">Attach accessory</a>
+                <a class="ipad-add-accessory-button" routerLink="/ipad-catalog/ipad-attach-accessory/{{ ipad._id }}">Attach accessory</a>
                 <div class="ipad-edit-delete">
-                    <a class="ipad-edit-button" routerLink="/ipad-catalog/ipad-edit">Edit</a>
+                    <a class="ipad-edit-button" routerLink="/ipad-catalog/ipad-edit/{{ ipad._id }}">Edit</a>
                     <a class="ipad-delete-button">Delete</a>
                 </div>
             </div>

@@ -8,6 +8,7 @@ import { iPhone } from 'src/app/types/iphone';
   templateUrl: './iphone-details.component.html',
   styleUrls: ['./iphone-details.component.css']
 })
+
 export class iPhoneDetailsComponent implements OnInit {
   iphone = {} as iPhone;
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
@@ -20,5 +21,4 @@ export class iPhoneDetailsComponent implements OnInit {
       })
     })
   }
-
 }
