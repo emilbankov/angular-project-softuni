@@ -1,7 +1,6 @@
 import { Component, AfterViewInit, Renderer2 } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { loginRegisterToggle } from 'src/assets/scripts/login-register';
-import { emailValidator } from '../../utils/email-validator';
 import { matchPasswordsValidator } from '../../utils/match-passwords';
 
 @Component({
@@ -11,7 +10,7 @@ import { matchPasswordsValidator } from '../../utils/match-passwords';
 })
 export class LoginRegisterComponent implements AfterViewInit {
   form = this.fb.group({
-    email: ['', [Validators.required, emailValidator()]],
+    email: ['', [Validators.required, Validators.pattern('[A-Za-z0-9]+@(gmail|abv|mail)\\.(bg|com)')]],
     passGroup: this.fb.group({
       password: ['', [Validators.required]],
       rePassword: ['', [Validators.required]]
@@ -36,7 +35,7 @@ export class LoginRegisterComponent implements AfterViewInit {
 
   get email() { return this.form.get('email'); }
   get isEmailRequired() { return this.form.get('email')?.errors?.['required']; }
-  get isEmailValid() { return this.form.get('email')?.errors?.['emailValidator']; }
+  get isEmailValid() { return this.form.get('email')?.errors?.['pattern']; }
   get password() { return this.form.get('passGroup')?.get('password'); }
   get isPasswordRequired() { return this.form.get('passGroup')?.get('password')?.errors?.['required']; }
   get rePassword() { return this.form.get('passGroup')?.get('rePassword'); }
