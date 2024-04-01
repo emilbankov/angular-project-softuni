@@ -1,7 +1,7 @@
 <section class="site-section imac-details-container">
     <div class="imac-details-product">
         <div class="imac-details-image">
-            <img src="../../../../assets/images/catalog/imacs/imac-black.png">
+            <img src="{{ imac.imageUrl }}">
         </div>
         <div class="imac-details">
             <h3>iMac Pro</h3>
@@ -9,34 +9,34 @@
                 <ul class="imac-details-list">
                     <li>
                         <strong>CPU:</strong>
-                        <p>8-Core</p>
+                        <p>{{ imac.cpu }}</p>
                     </li>
                     <li>
                         <strong>GPU:</strong>
-                        <p>10-Core</p>
+                        <p>{{ imac.gpu }}</p>
                     </li>
                     <li>
                         <strong>Display:</strong>
-                        <p>24-inch</p>
+                        <p>{{ imac.display }}-inch</p>
                     </li>
                     <li>
                         <strong>Storage:</strong>
-                        <p>256 GB</p>
+                        <p>{{ imac.storage }} GB</p>
                     </li>
                 </ul>
             </div>
             <div class="imac-details-description">
-                <p>The most affordable Mac desktop with outsized performance.</p>
+                <p>{{ imac.description }}</p>
             </div>
         </div>
         <div class="imac-details-price-container">
             <div class="imac-details-price-box">
-                <span class="imac-details-price">$3999<span class="imac-details-superscript">,99</span></span>
+                <span class="imac-details-price">${{ imac.price && imac.price.split(",")[0] }}<span class="imac-details-superscript">,{{ imac.price && imac.price.split(",")[1] }}</span></span>
             </div>
             <div class="imac-details-buttons">
-                <a class="imac-add-accessory-button" routerLink="/imac-catalog/imac-attach-accessory">Attach accessory</a>
+                <a class="imac-add-accessory-button" routerLink="/imac-catalog/imac-attach-accessory/{{ imac._id }}">Attach accessory</a>
                 <div class="imac-edit-delete">
-                    <a class="imac-edit-button" routerLink="/imac-catalog/imac-edit">Edit</a>
+                    <a class="imac-edit-button" routerLink="/imac-catalog/imac-edit/{{ imac._id }}">Edit</a>
                     <a class="imac-delete-button">Delete</a>
                 </div>
             </div>
