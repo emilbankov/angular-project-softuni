@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-accessories',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-accessories.component.css']
 })
 export class AddAccessoriesComponent {
-
+  addIphone(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+  }
 }

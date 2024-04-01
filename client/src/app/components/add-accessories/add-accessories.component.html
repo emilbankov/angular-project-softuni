@@ -4,8 +4,13 @@
             <span class="accessory">Accessory</span>
             <form class="form" id="iphone-form">
                 <h3>Accessory</h3>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Image URL">
+                <input type="text" name="name" placeholder="Name" ngModel #inputNameAccessory="ngModel" required minlength="5" maxlength="25">
+                <div class="error-msg" *ngIf="inputNameAccessory.dirty && inputNameAccessory.errors?.['required']">Name is required!</div>
+                <div class="error-msg" *ngIf="inputNameAccessory.dirty && inputNameAccessory.errors?.['minlength']">Name must be between 5 and 25 charachters</div>
+
+                <input type="text" name="imageUrl" placeholder="Image URL" ngModel #inputImageUrlAccessory="ngModel" required pattern="^https?:\/\/.+">
+                <div class="error-msg" *ngIf="inputImageUrlAccessory.dirty && inputImageUrlAccessory.errors?.['required']">Image URL is required!</div>
+                <div class="error-msg" *ngIf="inputImageUrlAccessory.dirty && inputImageUrlAccessory.errors?.['pattern']">Provide a valid Image URL!</div>
                 <button>Add Accessory</button>
             </form>
         </div>
