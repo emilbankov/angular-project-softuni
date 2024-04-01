@@ -145,7 +145,42 @@
                 <div class="error-msg" *ngIf="inputPriceIpad.dirty && inputPriceIpad.errors?.['pattern']">Price must be e.g. xxx,xx or xxxx,xx</div>
                 <button>Add Product</button>
             </form>
-            
+            <form style="display: none;" class="form" id="imac-form" #form="ngForm" (ngSubmit)="addImac(form)">
+                <span class="imac-add-span">iMac</span>
+                <h3>iMac</h3>
+                <input type="text" name="name" placeholder="Name" ngModel #inputNameImac="ngModel" required minlength="4" maxlength="20">
+                <div class="error-msg" *ngIf="inputNameImac.dirty && inputNameImac.errors?.['required']">Name is required!</div>
+                <div class="error-msg" *ngIf="inputNameImac.dirty && inputNameImac.errors?.['minlength']">Name must be between 4 and 20 charachters</div>
+
+                <input type="text" name="imageUrl" placeholder="Image URL" ngModel #inputImageUrlImac="ngModel" required pattern="^https?:\/\/.+">
+                <div class="error-msg" *ngIf="inputImageUrlImac.dirty && inputImageUrlImac.errors?.['required']">Image URL is required!</div>
+                <div class="error-msg" *ngIf="inputImageUrlImac.dirty && inputImageUrlImac.errors?.['pattern']">Provide a valid Image URL!</div>
+
+                <input type="number" name="cpu" placeholder="CPU" ngModel #inputCpuImac="ngModel" required min="6" max="12">
+                <div class="error-msg" *ngIf="inputCpuImac.dirty && inputCpuImac.errors?.['required']">CPU is required!</div>
+                <div class="error-msg" *ngIf="inputCpuImac.dirty && (inputCpuImac.errors?.['min'] || inputCpuImac.errors?.['max'])">CPU must be between 6 and 12 cores</div>
+
+                <input type="number" name="gpu" placeholder="GPU" ngModel #inputGpuImac="ngModel" required min="6" max="12">
+                <div class="error-msg" *ngIf="inputGpuImac.dirty && inputGpuImac.errors?.['required']">GPU is required!</div>
+                <div class="error-msg" *ngIf="inputGpuImac.dirty && (inputGpuImac.errors?.['min'] || inputGpuImac.errors?.['max'])">GPU must be between 6 and 12 cores</div>
+                
+                <input type="text" name="description" placeholder="Description" ngModel #inputDescriptionImac="ngModel" required minlength="10" maxlength="70">
+                <div class="error-msg" *ngIf="inputDescriptionImac.dirty && inputDescriptionImac.errors?.['required']">Description is required!</div>
+                <div class="error-msg" *ngIf="inputDescriptionImac.dirty && inputDescriptionImac.errors?.['minlength']">Description must be between 10 and 70 charachters</div>
+
+                <input type="number" name="display" placeholder="Display (inch)" ngModel #inputDisplayImac="ngModel" required min="21.5" max="32">
+                <div class="error-msg" *ngIf="inputDisplayImac.dirty && inputDisplayImac.errors?.['required']">Display is required!</div>
+                <div class="error-msg" *ngIf="inputDisplayImac.dirty && (inputDisplayImac.errors?.['min'] || inputDisplayImac.errors?.['max'])">Display size must be between 21.5 and 32 inches</div>
+
+                <input type="number" name="storage" placeholder="Storage" ngModel #inputStorageImac="ngModel" required pattern="^(256|512|1024|2048)$">
+                <div class="error-msg" *ngIf="inputStorageImac.dirty && inputStorageImac.errors?.['required']">Storage is required!</div>
+                <div class="error-msg" *ngIf="inputStorageImac.dirty && inputStorageImac.errors?.['pattern']">Storage size must be 256, 512, 1024 or 2048 GB</div>
+
+                <input type="text" name="price" placeholder="Price" ngModel #inputPriceImac="ngModel" required pattern="^\d{4},\d{2}$">
+                <div class="error-msg" *ngIf="inputPriceImac.dirty && inputPriceImac.errors?.['required']">Price is required!</div>
+                <div class="error-msg" *ngIf="inputPriceImac.dirty && inputPriceImac.errors?.['pattern']">Price must be e.g. xxxx,xx</div>
+                <button>Add Product</button>
+            </form>
         </div>
     </div>
 </section>
