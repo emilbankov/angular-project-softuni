@@ -1,12 +1,25 @@
 <div class="container-login-register" id="container">
     <div class="form-container sign-up">
         <span>Apple</span>
-        <form>
+        <form [formGroup]="form" (ngSubmit)="register()">
             <h3>Sign Up</h3>
-            <!-- <input type="text" placeholder="Name"> -->
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <input type="password" placeholder="Repeat-Password">
+            <input type="email" placeholder="Email" formControlName="email">
+            <ng-container *ngIf="email?.touched">
+                <div class="error-msg" *ngIf="isEmailRequired">Email is required!</div>
+                <div class="error-msg" *ngIf="isEmailValid">Email is invalid!</div>
+            </ng-container>
+
+            <ng-container formGroupName="passGroup">
+                <input type="password" placeholder="Password" formControlName="password">
+                <ng-container *ngIf="password?.touched">
+                    <div class="error-msg" *ngIf="isPasswordRequired">Password is required!</div>
+                </ng-container>
+
+                <input type="password" placeholder="Repeat Password" formControlName="rePassword">
+                <ng-container *ngIf="rePassword?.touched">
+                    <div class="error-msg" *ngIf="areMatching || isrePasswordRequired">Passwords don't match!</div>
+                </ng-container>
+            </ng-container>
             <button class="white">Sign Up</button>
         </form>
     </div>
