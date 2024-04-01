@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -9,18 +10,36 @@ import { ApiService } from 'src/app/api.service';
 export class AddProductsComponent {
   constructor(private apiService: ApiService) {}
 
-  addIphone(e: Event, name: string, imageUrl: string, color: string, batteryLife: string, description: string, display: string, storage: string, price: string) {
-    e.preventDefault();
-    this.apiService.addIphone(name, imageUrl, color, batteryLife, description, display, storage, price).subscribe();
+  addIphone(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
   }
 
-  addIpad(e: Event, name: string, imageUrl: string, color: string, batteryLife: string, description: string, display: string, storage: string, price: string) {
-    e.preventDefault();
-    this.apiService.addIpad(name, imageUrl, color, batteryLife, description, display, storage, price).subscribe();
+  addIpad(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
   }
 
-  addImac(e: Event, name: string, imageUrl: string, cpu: string, gpu: string, description: string, display: string, storage: string, price: string) {
-    e.preventDefault();
-    this.apiService.addImac(name, imageUrl, cpu, gpu, description, display, storage, price).subscribe();
+  addImac(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
   }
+
+  // addIphone(e: Event, name: string, imageUrl: string, color: string, batteryLife: string, description: string, display: string, storage: string, price: string) {
+  //   e.preventDefault();
+  //   this.apiService.addIphone(name, imageUrl, color, batteryLife, description, display, storage, price).subscribe();
+  // }
+
+  // addIpad(e: Event, name: string, imageUrl: string, color: string, batteryLife: string, description: string, display: string, storage: string, price: string) {
+  //   e.preventDefault();
+  //   this.apiService.addIpad(name, imageUrl, color, batteryLife, description, display, storage, price).subscribe();
+  // }
+
+  // addImac(e: Event, name: string, imageUrl: string, cpu: string, gpu: string, description: string, display: string, storage: string, price: string) {
+  //   e.preventDefault();
+  //   this.apiService.addImac(name, imageUrl, cpu, gpu, description, display, storage, price).subscribe();
+  // }
 }
