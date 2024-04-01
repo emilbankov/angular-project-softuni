@@ -13,4 +13,14 @@ export class AddProductsComponent {
     e.preventDefault();
     this.apiService.addIphone(name, imageUrl, color, batteryLife, description, display, storage, price).subscribe();
   }
+
+  addIpad(e: Event, name: string, imageUrl: string, color: string, batteryLife: string, description: string, display: string, storage: string, price: string) {
+    e.preventDefault();
+    this.apiService.addIpad(name, imageUrl, color, batteryLife, description, display, storage, price).subscribe();
+  }
+
+  addImac(e: Event, name: string, imageUrl: string, cpu: string, gpu: string, description: string, display: string, storage: string, price: string) {
+    e.preventDefault();
+    this.apiService.addImac(name, imageUrl, cpu, gpu, description, display, storage, price).subscribe();
+  }
 }
