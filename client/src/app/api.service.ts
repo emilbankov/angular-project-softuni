@@ -31,7 +31,20 @@ export class ApiService {
       'X-Authorization': accessToken
     });
 
-    return this.http.post<iPhone>(`${this.baseUrl}/iphones`, { name, imageUrl, color, batteryLife, description, display, storage, price }, { headers })
+    return this.http.post<iPhone>(`${this.baseUrl}/iphones`, { name, imageUrl, color, batteryLife, description, display, storage, price }, { headers });
+  }
+
+  editIphone(iphoneId: string, name: string, imageUrl: string, color: string, batteryLife: number, description: string, display: number, storage: number, price: string) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+
+    return this.http.put<iPhone>(`${this.baseUrl}/iphones/${iphoneId}`, { name, imageUrl, color, batteryLife, description, display, storage, price }, { headers });
   }
 
   // iPad Services
@@ -53,7 +66,20 @@ export class ApiService {
       'X-Authorization': accessToken
     });
 
-    return this.http.post<iPad>(`${this.baseUrl}/ipads`, { name, imageUrl, color, batteryLife, description, display, storage, price }, { headers })
+    return this.http.post<iPad>(`${this.baseUrl}/ipads`, { name, imageUrl, color, batteryLife, description, display, storage, price }, { headers });
+  }
+
+  editIpad(ipadId: string, name: string, imageUrl: string, color: string, batteryLife: number, description: string, display: number, storage: number, price: string) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+
+    return this.http.put<iPad>(`${this.baseUrl}/ipads/${ipadId}`, { name, imageUrl, color, batteryLife, description, display, storage, price }, { headers });
   }
 
   // iMac Services
@@ -75,6 +101,19 @@ export class ApiService {
       'X-Authorization': accessToken
     });
 
-    return this.http.post<iMac>(`${this.baseUrl}/imacs`, { name, imageUrl, cpu, gpu, description, display, storage, price }, { headers })
+    return this.http.post<iMac>(`${this.baseUrl}/imacs`, { name, imageUrl, cpu, gpu, description, display, storage, price }, { headers });
+  }
+
+  editImac(imacId: string, name: string, imageUrl: string, cpu: number, gpu: number, description: string, display: number, storage: number, price: string) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+
+    return this.http.put<iMac>(`${this.baseUrl}/imacs/${imacId}`, { name, imageUrl, cpu, gpu, description, display, storage, price }, { headers });
   }
 }
