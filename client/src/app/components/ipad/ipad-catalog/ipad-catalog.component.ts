@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
-import { iPad } from 'src/app/types/ipad';
+import iPad from 'src/app/types/ipad';
 
 @Component({
   selector: 'app-ipad-catalog',
@@ -13,7 +13,7 @@ export class iPadCatalogComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getAllIpads().subscribe((ipads) => {
+    this.api.getAllIpads().then((ipads) => {
       this.ipads = ipads;
     })
   }

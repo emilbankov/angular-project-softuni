@@ -13,7 +13,7 @@ export class iMacCatalogComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getAllImacs().subscribe((imacs) => {
+    this.api.getAllImacs().then((imacs) => {
       this.imacs = imacs;
     })
   }

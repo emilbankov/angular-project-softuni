@@ -16,7 +16,7 @@ export class iPhoneDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((data) => {
       const id = data['iphoneId'];
-      this.apiService.getIphone(id).subscribe((iphone) => {
+      this.apiService.getIphone(id).then((iphone) => {
         this.iphone = iphone;
       })
     })

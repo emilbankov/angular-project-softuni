@@ -1,62 +1,3 @@
-<!-- <section class="site-section">
-    <div class="add-products">
-        <div class="form-add-product">
-            <div class="toggle-button">
-                <input type="radio" name="toggle" id="iphone" class="toggle-input" checked />
-                <input type="radio" name="toggle" id="ipad" class="toggle-input" />
-                <input type="radio" name="toggle" id="imac" class="toggle-input" />
-
-                <div class="toggle-container-products">
-                    <label for="iphone" class="toggle-label" onclick="showForm('iphone')"><img src="../../../assets/images/apple-iphone/iphone.svg" alt=""></label>
-                    <label for="ipad" class="toggle-label" onclick="showForm('ipad')"><img src="../../../assets/images/apple-ipad/ipad.svg" alt=""></label>
-                    <label for="imac" class="toggle-label" onclick="showForm('imac')"><img src="../../../assets/images/apple-imac/imac.svg" alt=""></label>
-                    <div class="toggle-circle"></div>
-                </div>
-            </div>
-            <form class="form" id="iphone-form">
-                <span class="iphone-add-span">iPhone</span>
-                <h3>iPhone</h3>
-                <input type="text" placeholder="Name" #inputName>
-                <input type="text" placeholder="Image URL" #inputImageUrl>
-                <input type="text" placeholder="Color" #inputColor>
-                <input type="text" placeholder="Battery Life" #inputBatteryLife>
-                <input type="text" placeholder="Description" #inputDescription>
-                <input type="number" placeholder="Display (inch)" #inputDisplay>
-                <input type="number" placeholder="Storage" #inputStorage>
-                <input type="number" placeholder="Price" #inputPrice>
-                <button (click)="addIphone($event, inputName.value, inputImageUrl.value, inputColor.value, inputBatteryLife.value, inputDescription.value, inputDisplay.value, inputStorage.value, inputPrice.value)">Add Product</button>
-            </form>
-            <form style="display: none;" class="form" id="ipad-form">
-                <span class="ipad-add-span">iPad</span>
-                <h3>iPad</h3>
-                <input type="text" placeholder="Name" #inputName>
-                <input type="text" placeholder="Image URL" #inputImageUrl>
-                <input type="text" placeholder="Color" #inputColor>
-                <input type="text" placeholder="Battery Life" #inputBatteryLife>
-                <input type="text" placeholder="Description" #inputDescription>
-                <input type="number" placeholder="Display (inch)" #inputDisplay>
-                <input type="number" placeholder="Storage" #inputStorage>
-                <input type="number" placeholder="Price" #inputPrice>
-                <button (click)="addIpad($event, inputName.value, inputImageUrl.value, inputColor.value, inputBatteryLife.value, inputDescription.value, inputDisplay.value, inputStorage.value, inputPrice.value)">Add Product</button>
-            </form>
-
-            <form style="display: none;" class="form" id="imac-form">
-                <span class="imac-add-span">iMac</span>
-                <h3>iMac</h3>
-                <input type="text" placeholder="Name" #inputName>
-                <input type="text" placeholder="Image URL" #inputImageUrl>
-                <input type="text" placeholder="CPU" #inputCpu>
-                <input type="text" placeholder="GPU" #inputGpu>
-                <input type="text" placeholder="Description" #inputDescription>
-                <input type="number" placeholder="Display (inch)" #inputDisplay>
-                <input type="number" placeholder="Storage" #inputStorage>
-                <input type="number" placeholder="Price" #inputPrice>
-                <button (click)="addImac($event, inputName.value, inputImageUrl.value, inputCpu.value, inputGpu.value, inputDescription.value, inputDisplay.value, inputStorage.value, inputPrice.value)">Add Product</button>
-            </form>
-        </div>
-    </div>
-</section> -->
-
 <section class="site-section">
     <div class="add-products">
         <div class="form-add-product">
@@ -107,7 +48,7 @@
                 <div class="error-msg" *ngIf="inputPriceIphone.dirty && inputPriceIphone.errors?.['required']">Price is required!</div>
                 <div class="error-msg" *ngIf="inputPriceIphone.dirty && inputPriceIphone.errors?.['pattern']">Price must be e.g. xxx,xx or xxxx,xx</div>
 
-                <button >Add Product</button>
+                <button>Add Product</button>
             </form>
             <form style="display: none;" class="form" id="ipad-form" #form="ngForm" (ngSubmit)="addIpad(form)">
                 <span class="ipad-add-span">iPad</span>
