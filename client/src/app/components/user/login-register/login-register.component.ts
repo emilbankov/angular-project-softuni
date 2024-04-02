@@ -36,18 +36,15 @@ export class LoginRegisterComponent implements AfterViewInit {
       return;
     }
 
-    const { email, passGroup: { password } = {} } = this.registerForm.value;
-    this.userService.register(email!, password!).subscribe({
-      next: (result) => {
+    try {
+      const { email, passGroup: { password } = {} } = this.registerForm.value;
+      this.userService.register(email!, password!).then((result) => {
         localStorage.setItem('accessToken', result.accessToken)
-        this.router.navigate(['/']);
-        console.log(result);
-        
-      },
-      error: (error) => {
-        this.registerErrorMessage = error.error.message;
-      },
-    });
+      })
+      this.router.navigate(['/'])
+    } catch (error: any) {
+      this.registerErrorMessage = error.message;
+    }
   }
 
   login() {
@@ -55,18 +52,15 @@ export class LoginRegisterComponent implements AfterViewInit {
       return;
     }
 
-    const { email, password } = this.loginForm.value;
-    this.userService.login(email!, password!).subscribe({
-      next: (result) => {
+    try {
+      const { email, password } = this.loginForm.value;
+      this.userService.login(email!, password!).then((result) => {
         localStorage.setItem('accessToken', result.accessToken)
-        this.router.navigate(['/']);
-        console.log(result);
-        
-      },
-      error: (error) => {
-        this.loginErrorMessage = error.error.message;
-      },
-    });
+      })
+      this.router.navigate(['/'])
+    } catch (error: any) {
+      this.loginErrorMessage = error.message;
+    }
   }
 
   ngAfterViewInit(): void {
