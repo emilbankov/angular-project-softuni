@@ -17,5 +17,4 @@ export class iMacCatalogComponent implements OnInit {
       this.imacs = imacs;
     })
   }
-
 }

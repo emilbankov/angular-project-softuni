@@ -15,8 +15,6 @@ export class iPhoneCatalogComponent implements OnInit {
   ngOnInit(): void {
     this.api.getAllIphones().subscribe((iphones) => {
       this.iphones = iphones;
-      console.log(iphones);
-      
     })
   }
   
