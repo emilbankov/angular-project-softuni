@@ -1,7 +1,7 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
 import { UserAuth } from 'src/app/types/user';
-import { get, post } from '../utils/request';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -17,30 +17,30 @@ export class UserService implements OnDestroy {
     return !!localStorage.getItem('accessToken');
   }
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.userSubscription = this.user$.subscribe(user => {
       this.user = user
     })
   }
 
   login(email: string, password: string) {
-    return post('http://localhost:3030/users/login', { email, password }).then((user) => {
-      this.user$$.next(user as UserAuth);
-      return user;
-    })
+    return this.http.post<UserAuth>('http://localhost:3030/users/login', { email, password }).pipe(tap((user) => this.user$$.next(user)));
   }
 
   register(email: string, password: string) {
-    return post('http://localhost:3030/users/register', { email, password }).then((user) => {
-      this.user$$.next(user as UserAuth);
-      return user;
-    })
+    return this.http.post<UserAuth>('http://localhost:3030/users/register', { email, password }).pipe(tap((user) => this.user$$.next(user)));
   }
 
   logout() {
-    return get('http://localhost:3030/users/logout').then(() => {
-      this.user$$.next(undefined);
-    })
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+    return this.http.get<UserAuth>('http://localhost:3030/users/logout', { headers }).pipe(tap(() => this.user$$.next(undefined)));
   }
 
   ngOnDestroy(): void {
