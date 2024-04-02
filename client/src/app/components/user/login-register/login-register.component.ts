@@ -11,6 +11,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-register.component.css']
 })
 export class LoginRegisterComponent implements AfterViewInit {
+  registerErrorMessage: string = '';
+  loginErrorMessage: string = '';
+
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.pattern('[A-Za-z0-9]+@(gmail|abv|mail)\\.(bg|com)')]],
     password: ['', [Validators.required]]
@@ -33,9 +36,18 @@ export class LoginRegisterComponent implements AfterViewInit {
       return;
     }
 
-    const { email, passGroup: { password, rePassword } = {} } = this.registerForm.value;
-    console.log(email, password);
-
+    const { email, passGroup: { password } = {} } = this.registerForm.value;
+    this.userService.register(email!, password!).subscribe({
+      next: (result) => {
+        localStorage.setItem('accessToken', result.accessToken)
+        this.router.navigate(['/']);
+        console.log(result);
+        
+      },
+      error: (error) => {
+        this.registerErrorMessage = error.error.message;
+      },
+    });
   }
 
   login() {
@@ -44,19 +56,17 @@ export class LoginRegisterComponent implements AfterViewInit {
     }
 
     const { email, password } = this.loginForm.value;
-    if (email && password) {
-      console.log(email);
-      console.log(password);
-
-      this.userService.login(email, password).subscribe(() => {
+    this.userService.login(email!, password!).subscribe({
+      next: (result) => {
+        localStorage.setItem('accessToken', result.accessToken)
         this.router.navigate(['/']);
-      });
-    }
-    // console.log(this.loginForm.value.email);
-    // console.log(email);
-    // console.log(password);
-
-    // this.userService.login(email, password)
+        console.log(result);
+        
+      },
+      error: (error) => {
+        this.loginErrorMessage = error.error.message;
+      },
+    });
   }
 
   ngAfterViewInit(): void {
