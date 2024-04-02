@@ -4,6 +4,7 @@ import { loginRegisterToggle } from 'src/assets/scripts/login-register';
 import { matchPasswordsValidator } from '../../utils/match-passwords';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login-register',
@@ -29,38 +30,43 @@ export class LoginRegisterComponent implements AfterViewInit {
     })
   })
 
-  constructor(private renderer: Renderer2, private userService: UserService, private fb: FormBuilder, private router: Router) { }
-
-  register() {
-    if (this.registerForm.invalid) {
-      return;
-    }
-
-    try {
-      const { email, passGroup: { password } = {} } = this.registerForm.value;
-      this.userService.register(email!, password!).then((result) => {
-        localStorage.setItem('accessToken', result.accessToken)
-      })
-      this.router.navigate(['/'])
-    } catch (error: any) {
-      this.registerErrorMessage = error.message;
-    }
-  }
+  constructor(private renderer: Renderer2, private userService: UserService, private fb: FormBuilder, private router: Router, private http: HttpClient) { }
 
   login() {
     if (this.loginForm.invalid) {
       return;
     }
 
-    try {
-      const { email, password } = this.loginForm.value;
-      this.userService.login(email!, password!).then((result) => {
-        localStorage.setItem('accessToken', result.accessToken)
-      })
-      this.router.navigate(['/'])
-    } catch (error: any) {
-      this.loginErrorMessage = error.message;
+    const { email, password } = this.loginForm.value;
+    this.userService.login(email!, password!).subscribe({
+      next: (result) => {
+        localStorage.setItem("accessToken", result.accessToken)
+        this.router.navigate(['/']);
+        console.log(result);
+
+      },
+      error: (error) => {
+        this.loginErrorMessage = error.error.message;
+      },
+    });
+  }
+
+  register() {
+    if (this.registerForm.invalid) {
+      return;
     }
+    const { email, passGroup: { password } = {} } = this.registerForm.value;
+    this.userService.register(email!, password!).subscribe({
+      next: (result) => {
+        localStorage.setItem("accessToken", result.accessToken)
+        this.router.navigate(['/']);
+        console.log(result);
+
+      },
+      error: (error) => {
+        this.registerErrorMessage = error.error.message;
+      },
+    });
   }
 
   ngAfterViewInit(): void {
