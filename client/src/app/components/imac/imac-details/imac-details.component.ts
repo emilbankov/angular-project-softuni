@@ -15,7 +15,7 @@ export class iMacDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((data) => {
       const id = data['imacId'];
-      this.apiService.getImac(id).then((imac) => {
+      this.apiService.getImac(id).subscribe((imac) => {
         this.imac = imac;
       })
     })
