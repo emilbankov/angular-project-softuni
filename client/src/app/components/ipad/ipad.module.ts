@@ -6,6 +6,7 @@ import { iPadAttachAccessoryComponent } from './ipad-attach-accessory/ipad-attac
 import { iPadEditComponent } from './ipad-edit/ipad-edit.component';
 import { RouterModule } from '@angular/router';
 import { iPadRoutingModule } from './ipad-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { iPadRoutingModule } from './ipad-routing.module';
   imports: [
     CommonModule,
     RouterModule,
-    iPadRoutingModule
+    iPadRoutingModule,
+    FormsModule
   ],
   exports: [
     iPadCatalogComponent,

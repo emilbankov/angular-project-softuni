@@ -6,6 +6,7 @@ import { iMacAttachAccessoryComponent } from './imac-attach-accessory/imac-attac
 import { iMacEditComponent } from './imac-edit/imac-edit.component';
 import { RouterModule } from '@angular/router';
 import { iMacRoutingModule } from './imac-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { iMacRoutingModule } from './imac-routing.module';
   imports: [
     CommonModule,
     RouterModule,
-    iMacRoutingModule
+    iMacRoutingModule,
+    FormsModule
   ],
   exports: [
     iMacCatalogComponent,
