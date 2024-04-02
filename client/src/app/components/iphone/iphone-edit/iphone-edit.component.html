@@ -1,17 +1,41 @@
 <section class="site-section">
     <div class="iphone-edit">
         <div class="form-iphone-edit">
-            <form>
+            <form #editIphoneForm="ngForm" (ngSubmit)="editIphone(editIphoneForm)">
                 <span class="iphone-edit-span">iPhone</span>
                 <h3>iPhone</h3>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Image URL">
-                <input type="text" placeholder="Color">
-                <input type="text" placeholder="Battery Life">
-                <input type="text" placeholder="Description">
-                <input type="number" placeholder="Display (inch)">
-                <input type="number" placeholder="Storage">
-                <input type="number" placeholder="Price">
+                <input type="text" name="name" placeholder="Name" ngModel #inputNameIphone="ngModel" required minlength="6" maxlength="17">
+                <div class="error-msg" *ngIf="inputNameIphone.dirty && inputNameIphone.errors?.['required']">Name is required!</div>
+                <div class="error-msg" *ngIf="inputNameIphone.dirty && inputNameIphone.errors?.['minlength']">Name must be between 6 and 17 charachters</div>
+
+                <input type="text" name="imageUrl" placeholder="Image URL" ngModel #inputImageUrlIphone="ngModel" required pattern="^https?:\/\/.+">
+                <div class="error-msg" *ngIf="inputImageUrlIphone.dirty && inputImageUrlIphone.errors?.['required']">Image URL is required!</div>
+                <div class="error-msg" *ngIf="inputImageUrlIphone.dirty && inputImageUrlIphone.errors?.['pattern']">Provide a valid Image URL!</div>
+
+                <input type="text" name="color" placeholder="Color" ngModel #inputColorIphone="ngModel" required minlength="3" maxlength="20">
+                <div class="error-msg" *ngIf="inputColorIphone.dirty && inputColorIphone.errors?.['required']">Color is required!</div>
+                <div class="error-msg" *ngIf="inputColorIphone.dirty && inputColorIphone.errors?.['minlength']">Color must be between 3 and 20 charachters</div>
+
+                <input type="number" name="batteryLife" placeholder="Battery Life" ngModel #inputBatteryLifeIphone="ngModel" required min="16" max="32">
+                <div class="error-msg" *ngIf="inputBatteryLifeIphone.dirty && inputBatteryLifeIphone.errors?.['required']">Battery Life is required!</div>
+                <div class="error-msg" *ngIf="inputBatteryLifeIphone.dirty && (inputBatteryLifeIphone.errors?.['min'] || inputBatteryLifeIphone.errors?.['max'])">Battery Life must be between 16 and 32 hours</div>
+
+                <input type="text" name="description" placeholder="Description" ngModel #inputDescriptionIphone="ngModel" required minlength="10" maxlength="30">
+                <div class="error-msg" *ngIf="inputDescriptionIphone.dirty && inputDescriptionIphone.errors?.['required']">Description is required!</div>
+                <div class="error-msg" *ngIf="inputDescriptionIphone.dirty && inputDescriptionIphone.errors?.['minlength']">Description must be between 10 and 30 charachters</div>
+
+                <input type="number" name="display" placeholder="Display (inch)" ngModel #inputDisplayIphone="ngModel" required min="5" max="6.9">
+                <div class="error-msg" *ngIf="inputDisplayIphone.dirty && inputDisplayIphone.errors?.['required']">Display is required!</div>
+                <div class="error-msg" *ngIf="inputDisplayIphone.dirty && (inputDisplayIphone.errors?.['min'] || inputDisplayIphone.errors?.['max'])">Display size must be between 5 and 6.9 inches</div>
+
+                <input type="number" name="storage" placeholder="Storage" ngModel #inputStorageIphone="ngModel" required pattern="^(128|256|512|1024)$">
+                <div class="error-msg" *ngIf="inputStorageIphone.dirty && inputStorageIphone.errors?.['required']">Storage is required!</div>
+                <div class="error-msg" *ngIf="inputStorageIphone.dirty && inputStorageIphone.errors?.['pattern']">Storage size must be 128, 256, 512 or 1024 GB</div>
+
+                <input type="text" name="price" placeholder="Price" ngModel #inputPriceIphone="ngModel"required pattern="^\d{3,4},\d{2}$">
+                <div class="error-msg" *ngIf="inputPriceIphone.dirty && inputPriceIphone.errors?.['required']">Price is required!</div>
+                <div class="error-msg" *ngIf="inputPriceIphone.dirty && inputPriceIphone.errors?.['pattern']">Price must be e.g. xxx,xx or xxxx,xx</div>
+
                 <button>Edit</button>
             </form>
         </div>
