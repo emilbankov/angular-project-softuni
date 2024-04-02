@@ -1339,63 +1339,166 @@
     	}
     };
     var seedData = {
-        games: {
-            "63ca85c8-d000-4172-b469-f61d6de55fbc": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                title: "Marvel's Spider-Man 2 (PS5)",
-                imageUrl: "https://m.media-amazon.com/images/I/81VGpLvXQuL._AC_UF1000,1000_QL80_.jpg",
-                genre: "Action",
-                developer: "Insomniac Games",
-                players: "1",
-                price: "119,99",
-                description: " Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel's Spider-Man franchise for PS5. Swing, jump and utilize the new Web Wings to travel across Marvel's New York, quickly switching between Peter Parker and Miles Morales to experience different stories and epic new powers, as the iconic villain Venom threatens to destroy their lives, their city and the ones they love.\n",
-                _createdOn: 1702046439154,
-                _id: "63ca85c8-d000-4172-b469-f61d6de55fbc"
-            }
-        },
         iphones: {
-            "iphone-15-pro-max": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+            "524a52ae-f401-42f3-81ef-ecc577674a51": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
                 name: "iPhone 15 Pro Max",
                 imageUrl: "https://twigo.ru/center/iblock/69f/7s2k3g7jksfc2hbqaj5lxd10p2s52xvp/nxz54zajpkfqdpidnqn77eto69k0heem.jpeg",
                 color: "Black Titanium",
-                batteryLife: "27",
+                batteryLife: 27,
                 description: "The pro max experience.",
-                display: "6.7",
-                storage: "256",
+                display: 6.7,
+                storage: 1024,
                 price: "1199,99",
-                _createdOn: 1702046439154,
-                _id: "iphone-15-pro-max"
+                _createdOn: 1712084776599,
+                _id: "524a52ae-f401-42f3-81ef-ecc577674a51"
+            },
+            "d79e6e18-4ff3-42d1-a6ac-e3919e66360e": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iPhone 15 Pro",
+                imageUrl: "https://www.apple.com/v/iphone/home/bt/images/overview/select/iphone_15_pro__bpnjhcrxofqu_xlarge.png",
+                color: "Grey Titanium",
+                batteryLife: 24,
+                description: "The ultimate iPhone.",
+                display: 6.1,
+                storage: 512,
+                price: "999,99",
+                _createdOn: 1712084954751,
+                _id: "d79e6e18-4ff3-42d1-a6ac-e3919e66360e"
+            },
+            "07c1ba10-573d-4413-aa0e-4c0a495503b5": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iPhone 15",
+                imageUrl: "https://www.apple.com/v/iphone/home/bt/images/overview/select/iphone_15__fm75iyqlkjau_xlarge.png",
+                color: "Pink Titatnium",
+                batteryLife: 22,
+                description: "A total powerhouse.",
+                display: 6.3,
+                storage: 512,
+                price: "799,99",
+                _createdOn: 1712085058606,
+                _id: "07c1ba10-573d-4413-aa0e-4c0a495503b5"
+            },
+            "1c8b2896-bc3d-426e-b6e8-51365338dcd9": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iPhone 14",
+                imageUrl: "https://www.apple.com/v/iphone/home/bt/images/overview/select/iphone_14__cjgvgyn9cquu_xlarge.png",
+                color: "Sky Blue",
+                batteryLife: 18,
+                description: "As amazing as ever.",
+                display: 5.5,
+                storage: 256,
+                price: "699,00",
+                _createdOn: 1712085136043,
+                _id: "1c8b2896-bc3d-426e-b6e8-51365338dcd9"
+            },
+            "560b2b92-4f58-4698-aed2-921b207e576b": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iPhone 13",
+                imageUrl: "https://www.apple.com/v/iphone/home/bt/images/overview/select/iphone_13__gnwdyqfq7i2y_xlarge.png",
+                color: "Dark Green",
+                batteryLife: 17,
+                description: "All kinds of awesome.",
+                display: 5.1,
+                storage: 128,
+                price: "599,99",
+                _createdOn: 1712085195329,
+                _id: "560b2b92-4f58-4698-aed2-921b207e576b"
             }
         },
         ipads: {
-            "ipad-pro": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+            "8b8594b5-5821-4fb6-b6af-d7dc38f083b3": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
                 name: "iPad Pro",
                 imageUrl: "https://www.apple.com/v/ipad/home/ci/images/overview/compare_ipad_pro__erf9x8mw04sy_large.png",
-                color: "Gold Titanium",
-                batteryLife: "24",
+                color: "Dark Grey",
+                batteryLife: 36,
                 description: "The ultimate iPad experience with the most advanced technology.",
-                display: "12.9",
-                storage: "256",
+                display: 12.9,
+                storage: 2048,
                 price: "1099,99",
-                _createdOn: 1702046439154,
-                _id: "ipad-pro"
+                _createdOn: 1712085876954,
+                _id: "8b8594b5-5821-4fb6-b6af-d7dc38f083b3"
+            },
+            "6134cf40-fbd8-4076-b1b9-ad9157aa6c95": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iPad Air",
+                imageUrl: "https://www.apple.com/v/ipad/home/ci/images/overview/compare_ipad_air__bxjv33pk6nte_large.png",
+                color: "Deep Purple",
+                batteryLife: 34,
+                description: "Serious performance in a thin and light design.",
+                display: 12.2,
+                storage: 1024,
+                price: "999,99",
+                _createdOn: 1712085935980,
+                _id: "6134cf40-fbd8-4076-b1b9-ad9157aa6c95"
+            },
+            "bd42c1a4-a375-41f7-9502-dab6ee53a7cd": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iPad 10th Generation",
+                imageUrl: "https://www.apple.com/v/ipad/home/ci/images/overview/compare_ipad_10_9__f7p2wja0gwuy_large.png",
+                color: "Rose Gold",
+                batteryLife: 28,
+                description: "The colorful, all‑screen iPad for the things you do every day.",
+                display: 11,
+                storage: 512,
+                price: "799,99",
+                _createdOn: 1712086018853,
+                _id: "bd42c1a4-a375-41f7-9502-dab6ee53a7cd"
+            },
+            "4b1a03a8-00dc-4baf-be19-463b1919abbe": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iPad 9th Generation",
+                imageUrl: "https://www.apple.com/v/ipad/home/ci/images/overview/compare_ipad_10_2__fwgwy7jydtea_large.png",
+                color: "Space Grey",
+                batteryLife: 28,
+                description: "All the essentials in the most affordable iPad.",
+                display: 9.8,
+                storage: 512,
+                price: "539,99",
+                _createdOn: 1712086097691,
+                _id: "4b1a03a8-00dc-4baf-be19-463b1919abbe"
             }
         }, 
         imacs: {
-            "imac-pro": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+            "7266813d-6d29-40b5-8d10-972a49177bf9": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
                 name: "iMac",
-                imageUrl: "https://www.apple.com/v/mac/home/by/images/overview/select/product_tile_imac_24__inq0od011wuq_large.png",
-                cpu: "8",
-                gpu: "10",
+                imageUrl: "https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_imac_24__inq0od011wuq_large.png",
+                cpu: 10,
+                gpu: 10,
                 description: "A stunning all-in-one desktop for creativity and productivity.",
-                display: "27",
-                storage: "1024",
-                price: "5000,00",
-                _createdOn: 1702046439154,
-                _id: "imac-pro"
+                display: 27,
+                storage: 1024,
+                price: "2600,00",
+                _createdOn: 1712084367888,
+                _id: "7266813d-6d29-40b5-8d10-972a49177bf9"
+            },
+            "e1938cf3-926e-4efd-89bb-4c4bf7a2ca90": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iMac Pro",
+                imageUrl: "https://www.pngkey.com/png/full/65-659869_mac-desktop-png-apple-imac-2015.png",
+                cpu: 12,
+                gpu: 12,
+                description: "The most affordable Mac desktop with outsized performance.",
+                display: 32,
+                storage: 2048,
+                price: "3999,99",
+                _createdOn: 1712084159132,
+                _id: "e1938cf3-926e-4efd-89bb-4c4bf7a2ca90"
+            },
+            "4dbee9dc-2dbb-4157-9eee-ed94ce6f971f": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iMac M3",
+                imageUrl: "https://www.pngall.com/wp-content/uploads/15/iMac-PNG-Pic.png",
+                cpu: 8,
+                gpu: 10,
+                description: "Strikingly thin and fast so you can work, play, or create anywhere.",
+                display: 24,
+                storage: 512,
+                price: "1899,99",
+                _createdOn: 1712084047231,
+                _id: "4dbee9dc-2dbb-4157-9eee-ed94ce6f971f"
             }
         },
         accessories: {
