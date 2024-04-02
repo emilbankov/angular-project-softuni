@@ -14,6 +14,7 @@
                 <input type="password" placeholder="Repeat Password" formControlName="rePassword">
                 <div class="error-msg" *ngIf="registerForm.get('passGroup')?.get('rePassword')?.dirty && (registerForm.get('passGroup')?.get('password')?.errors?.['required'] || registerForm.get('passGroup')?.errors?.['matchPasswordsValidator'])">Passwords don't match!</div>
             </ng-container>
+                <div class="error-msg" *ngIf="registerErrorMessage">{{registerErrorMessage}}!</div>
             <button class="white">Sign Up</button>
         </form>
     </div>
@@ -27,6 +28,8 @@
 
             <input type="password" placeholder="Password" formControlName="password">
             <div class="error-msg" *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors?.['required']">Password is required!</div>
+            <div class="error-msg" *ngIf="loginErrorMessage">Incorrect email or password!</div>
+
             <button class="white">Sign In</button>
         </form>
     </div>

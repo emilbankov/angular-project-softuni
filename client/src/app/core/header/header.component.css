@@ -38,17 +38,17 @@
     color: #ffffff;
 }
 
-.site-header nav a.login-register {
+.site-header nav a.login-register-logout {
     padding: 0.25rem;
     background-color: #ffffffcc;
     color: #1D1D1Fcc;
     font-weight: bold;
     border-radius: 50px;
     transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    ;
+    cursor: pointer;
 }
 
-.site-header nav a.login-register:hover {
+.site-header nav a.login-register-logout:hover {
     background-color: #ffffff;
     color: #1D1D1F;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);

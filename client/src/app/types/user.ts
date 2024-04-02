@@ -1,5 +1,6 @@
-export interface User {
+export interface UserAuth {
     email: string;
     password: string;
-    id: string;
+    _id: string,
+    accessToken: string
 }

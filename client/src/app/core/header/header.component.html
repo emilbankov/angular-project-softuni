@@ -9,7 +9,8 @@
             <li><a routerLink="/add-products">Add Products</a></li>
             <li><a routerLink="/add-accessories">Add Accessories</a></li>
             <li><a routerLink="/support">Support</a></li>
-            <li><a routerLink="/login-register" class="login-register">Login</a></li>
+            <li *ngIf="!isLoggedIn"><a routerLink="/login-register" class="login-register-logout">Login</a></li>
+            <li *ngIf="isLoggedIn" (click)="logout()"><a class="login-register-logout">Logout</a></li>
         </ul>
     </nav>
 </header>
