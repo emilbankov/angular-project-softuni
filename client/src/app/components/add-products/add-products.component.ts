@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
@@ -9,48 +9,38 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./add-products.component.css']
 })
 export class AddProductsComponent {
-  @ViewChild('iphoneCatalogSection') iphoneCatalogSection!: ElementRef;
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router ) {}
 
-
-  addIphone = async (form: NgForm) => {
+  addIphone(form: NgForm) {
     if (form.invalid) {
       return;
     }
-    try {
-      const { name, imageUrl, color, batteryLife, description, display, storage, price } = form.value;
-      await this.apiService.addIphone(name, imageUrl, color, batteryLife, description, display, storage, price)
-      this.router.navigate(['/iphone-catalog']);
-    } catch (error) {
-      console.error(error);
-    }
+
+    const { name, imageUrl, color, batteryLife, description, display, storage, price } = form.value;
+    this.apiService.addIphone(name, imageUrl, color, batteryLife, description, display, storage, price).subscribe(() => {
+      this.router.navigate(['/iphone-catalog'])
+    })
   }
 
-
-  addIpad(form: NgForm) {
-    if (form.invalid) {
+  addIpad(ipadForm: NgForm) {
+    if (ipadForm.invalid) {
       return;
     }
+
+    const { name, imageUrl, color, batteryLife, description, display, storage, price } = ipadForm.value;
+    this.apiService.addIpad(name, imageUrl, color, batteryLife, description, display, storage, price).subscribe(() => {
+      this.router.navigate(['/ipad-catalog'])
+    })
   }
 
-  addImac(form: NgForm) {
-    if (form.invalid) {
+  addImac(imacForm: NgForm) {
+    if (imacForm.invalid) {
       return;
     }
+
+    const { name, imageUrl, cpu, gpu, description, display, storage, price } = imacForm.value;
+    this.apiService.addImac(name, imageUrl, cpu, gpu, description, display, storage, price).subscribe(() => {
+      this.router.navigate(['/imac-catalog'])
+    })
   }
-
-  // addIphone(e: Event, name: string, imageUrl: string, color: string, batteryLife: string, description: string, display: string, storage: string, price: string) {
-  //   e.preventDefault();
-  //   this.apiService.addIphone(name, imageUrl, color, batteryLife, description, display, storage, price).subscribe();
-  // }
-
-  // addIpad(e: Event, name: string, imageUrl: string, color: string, batteryLife: string, description: string, display: string, storage: string, price: string) {
-  //   e.preventDefault();
-  //   this.apiService.addIpad(name, imageUrl, color, batteryLife, description, display, storage, price).subscribe();
-  // }
-
-  // addImac(e: Event, name: string, imageUrl: string, cpu: string, gpu: string, description: string, display: string, storage: string, price: string) {
-  //   e.preventDefault();
-  //   this.apiService.addImac(name, imageUrl, cpu, gpu, description, display, storage, price).subscribe();
-  // }
 }

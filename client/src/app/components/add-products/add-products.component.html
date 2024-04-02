@@ -13,7 +13,7 @@
                     <div class="toggle-circle"></div>
                 </div>
             </div>
-            <form class="form" id="iphone-form" #form="ngForm" (ngSubmit)="addIphone(form)">
+            <form class="form" id="iphone-form" #iphoneForm="ngForm" (ngSubmit)="addIphone(iphoneForm)">
                 <span class="iphone-add-span">iPhone</span>
                 <h3>iPhone</h3>
                 <input type="text" name="name" placeholder="Name" ngModel #inputNameIphone="ngModel" required minlength="6" maxlength="17">
@@ -32,9 +32,9 @@
                 <div class="error-msg" *ngIf="inputBatteryLifeIphone.dirty && inputBatteryLifeIphone.errors?.['required']">Battery Life is required!</div>
                 <div class="error-msg" *ngIf="inputBatteryLifeIphone.dirty && (inputBatteryLifeIphone.errors?.['min'] || inputBatteryLifeIphone.errors?.['max'])">Battery Life must be between 16 and 32 hours</div>
                 
-                <input type="text" name="description" placeholder="Description" ngModel #inputDescriptionIphone="ngModel" required minlength="10" maxlength="40">
+                <input type="text" name="description" placeholder="Description" ngModel #inputDescriptionIphone="ngModel" required minlength="10" maxlength="30">
                 <div class="error-msg" *ngIf="inputDescriptionIphone.dirty && inputDescriptionIphone.errors?.['required']">Description is required!</div>
-                <div class="error-msg" *ngIf="inputDescriptionIphone.dirty && inputDescriptionIphone.errors?.['minlength']">Description must be between 10 and 40 charachters</div>
+                <div class="error-msg" *ngIf="inputDescriptionIphone.dirty && inputDescriptionIphone.errors?.['minlength']">Description must be between 10 and 30 charachters</div>
 
                 <input type="number" name="display" placeholder="Display (inch)" ngModel #inputDisplayIphone="ngModel" required min="5" max="6.9">
                 <div class="error-msg" *ngIf="inputDisplayIphone.dirty && inputDisplayIphone.errors?.['required']">Display is required!</div>
@@ -50,7 +50,7 @@
 
                 <button>Add Product</button>
             </form>
-            <form style="display: none;" class="form" id="ipad-form" #form="ngForm" (ngSubmit)="addIpad(form)">
+            <form style="display: none;" class="form" id="ipad-form" #ipadForm="ngForm" (ngSubmit)="addIpad(ipadForm)">
                 <span class="ipad-add-span">iPad</span>
                 <h3>iPad</h3>
                 <input type="text" name="name" placeholder="Name" ngModel #inputNameIpad="ngModel" required minlength="4" maxlength="20">
@@ -86,7 +86,7 @@
                 <div class="error-msg" *ngIf="inputPriceIpad.dirty && inputPriceIpad.errors?.['pattern']">Price must be e.g. xxx,xx or xxxx,xx</div>
                 <button>Add Product</button>
             </form>
-            <form style="display: none;" class="form" id="imac-form" #form="ngForm" (ngSubmit)="addImac(form)">
+            <form style="display: none;" class="form" id="imac-form" #imacForm="ngForm" (ngSubmit)="addImac(imacForm)">
                 <span class="imac-add-span">iMac</span>
                 <h3>iMac</h3>
                 <input type="text" name="name" placeholder="Name" ngModel #inputNameImac="ngModel" required minlength="4" maxlength="20">
