@@ -1,28 +1,32 @@
 <div class="container-login-register" id="container">
     <div class="form-container sign-up">
         <span>Apple</span>
-        <form [formGroup]="form" (ngSubmit)="register()">
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
             <h3>Sign Up</h3>
             <input type="email" placeholder="Email" formControlName="email">
-            <div class="error-msg" *ngIf="email?.dirty && isEmailRequired">Email is required!</div>
-            <div class="error-msg" *ngIf="email?.dirty && isEmailValid">Email is invalid!</div>
+            <div class="error-msg" *ngIf="registerForm.get('email')?.dirty && registerForm.get('email')?.errors?.['required']">Email is required!</div>
+            <div class="error-msg" *ngIf="registerForm.get('email')?.dirty && registerForm.get('email')?.errors?.['pattern']">Email is invalid!</div>
 
             <ng-container formGroupName="passGroup">
                 <input type="password" placeholder="Password" formControlName="password">
-                <div class="error-msg" *ngIf="password?.dirty && isPasswordRequired">Password is required!</div>
+                <div class="error-msg" *ngIf="registerForm.get('passGroup')?.get('password')?.dirty && registerForm.get('passGroup')?.get('password')?.errors?.['required']">Password is required!</div>
 
                 <input type="password" placeholder="Repeat Password" formControlName="rePassword">
-                <div class="error-msg" *ngIf="rePassword?.dirty && (areMatching || isrePasswordRequired)">Passwords don't match!</div>
+                <div class="error-msg" *ngIf="registerForm.get('passGroup')?.get('rePassword')?.dirty && (registerForm.get('passGroup')?.get('password')?.errors?.['required'] || registerForm.get('passGroup')?.errors?.['matchPasswordsValidator'])">Passwords don't match!</div>
             </ng-container>
             <button class="white">Sign Up</button>
         </form>
     </div>
     <div class="form-container sign-in">
         <span>Apple</span>
-        <form>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
             <h3>Sign In</h3>
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
+            <input type="email" placeholder="Email" formControlName="email">
+            <div class="error-msg" *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['required']">Email is required!</div>
+            <div class="error-msg" *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['pattern']">Email is invalid!</div>
+
+            <input type="password" placeholder="Password" formControlName="password">
+            <div class="error-msg" *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors?.['required']">Password is required!</div>
             <button class="white">Sign In</button>
         </form>
     </div>

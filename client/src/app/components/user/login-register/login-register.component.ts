@@ -2,6 +2,8 @@ import { Component, AfterViewInit, Renderer2 } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { loginRegisterToggle } from 'src/assets/scripts/login-register';
 import { matchPasswordsValidator } from '../../utils/match-passwords';
+import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-register',
@@ -9,7 +11,12 @@ import { matchPasswordsValidator } from '../../utils/match-passwords';
   styleUrls: ['./login-register.component.css']
 })
 export class LoginRegisterComponent implements AfterViewInit {
-  form = this.fb.group({
+  loginForm = this.fb.group({
+    email: ['', [Validators.required, Validators.pattern('[A-Za-z0-9]+@(gmail|abv|mail)\\.(bg|com)')]],
+    password: ['', [Validators.required]]
+  })
+
+  registerForm = this.fb.group({
     email: ['', [Validators.required, Validators.pattern('[A-Za-z0-9]+@(gmail|abv|mail)\\.(bg|com)')]],
     passGroup: this.fb.group({
       password: ['', [Validators.required]],
@@ -19,26 +26,40 @@ export class LoginRegisterComponent implements AfterViewInit {
     })
   })
 
-  constructor(private renderer: Renderer2, private fb: FormBuilder) {}
+  constructor(private renderer: Renderer2, private userService: UserService, private fb: FormBuilder, private router: Router) { }
 
   register() {
-    if (this.form.invalid) {
+    if (this.registerForm.invalid) {
       return;
     }
-    console.log(this.form.value);
 
+    const { email, passGroup: { password, rePassword } = {} } = this.registerForm.value;
+    console.log(email, password);
+
+  }
+
+  login() {
+    if (this.loginForm.invalid) {
+      return;
+    }
+
+    const { email, password } = this.loginForm.value;
+    if (email && password) {
+      console.log(email);
+      console.log(password);
+
+      this.userService.login(email, password).subscribe(() => {
+        this.router.navigate(['/']);
+      });
+    }
+    // console.log(this.loginForm.value.email);
+    // console.log(email);
+    // console.log(password);
+
+    // this.userService.login(email, password)
   }
 
   ngAfterViewInit(): void {
     loginRegisterToggle(this.renderer);
   }
-
-  get email() { return this.form.get('email'); }
-  get isEmailRequired() { return this.form.get('email')?.errors?.['required']; }
-  get isEmailValid() { return this.form.get('email')?.errors?.['pattern']; }
-  get password() { return this.form.get('passGroup')?.get('password'); }
-  get isPasswordRequired() { return this.form.get('passGroup')?.get('password')?.errors?.['required']; }
-  get rePassword() { return this.form.get('passGroup')?.get('rePassword'); }
-  get isrePasswordRequired() { return this.form.get('passGroup')?.get('password')?.errors?.['required']; }
-  get areMatching() { return this.form.get('passGroup')?.errors?.['matchPasswordsValidator']; }
 }
