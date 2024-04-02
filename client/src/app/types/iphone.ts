@@ -3,10 +3,10 @@ export interface iPhone {
     name: string,
     imageUrl: string,
     color: string,
-    batteryLife: string,
+    batteryLife: number,
     description: string,
-    display: string,
-    storage: string,
+    display: number,
+    storage: number,
     price: string,
     _createdOn: number,
     _id: string
