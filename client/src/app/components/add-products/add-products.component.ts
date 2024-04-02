@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -8,13 +9,23 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./add-products.component.css']
 })
 export class AddProductsComponent {
-  constructor(private apiService: ApiService) {}
+  @ViewChild('iphoneCatalogSection') iphoneCatalogSection!: ElementRef;
+  constructor(private apiService: ApiService, private router: Router) { }
 
-  addIphone(form: NgForm) {
+
+  addIphone = async (form: NgForm) => {
     if (form.invalid) {
       return;
     }
+    try {
+      const { name, imageUrl, color, batteryLife, description, display, storage, price } = form.value;
+      await this.apiService.addIphone(name, imageUrl, color, batteryLife, description, display, storage, price)
+      this.router.navigate(['/iphone-catalog']);
+    } catch (error) {
+      console.error(error);
+    }
   }
+
 
   addIpad(form: NgForm) {
     if (form.invalid) {
