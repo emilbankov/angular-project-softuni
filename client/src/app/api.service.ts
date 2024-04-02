@@ -1,9 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { iMac } from './types/imac';
-import iPad from './types/ipad';
 import { iPhone } from './types/iphone';
-import { get, post } from './components/utils/request';
+import iPad from './types/ipad';
 
 @Injectable({
   providedIn: 'root'
@@ -15,40 +14,67 @@ export class ApiService {
 
   // iPhone Services
   getAllIphones() {
-    return get(`${this.baseUrl}/iphones`) as Promise<iPhone[]>;
+    return this.http.get<iPhone[]>(`${this.baseUrl}/iphones`);
   }
 
   getIphone(id: string) {
-    return get(`${this.baseUrl}/iphones/${id}`) as Promise<iPhone>;
+    return this.http.get<iPhone>(`${this.baseUrl}/iphones/${id}`);
   }
 
-  addIphone(name: string, imageUrl: string, color: string, batteryLife: string, description: string, display: string, storage: string, price: string) {
-    return post(`${this.baseUrl}/iphones`, { name, imageUrl, color, batteryLife, description, display, storage, price }) as Promise<iPhone>;
+  addIphone(name: string, imageUrl: string, color: string, batteryLife: number, description: string, display: number, storage: number, price: string) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+
+    return this.http.post<iPhone>(`${this.baseUrl}/iphones`, { name, imageUrl, color, batteryLife, description, display, storage, price }, { headers })
   }
 
   // iPad Services
   getAllIpads() {
-    return get(`${this.baseUrl}/ipads`) as Promise<iPad[]>;
+    return this.http.get<iPad[]>(`${this.baseUrl}/ipads`);
   }
 
   getIpad(id: string) {
-    return get(`${this.baseUrl}/ipads/${id}`) as Promise<iPad>;
+    return this.http.get<iPad>(`${this.baseUrl}/ipads/${id}`);
   }
 
-  addIpad(name: string, imageUrl: string, color: string, batteryLife: string, description: string, display: string, storage: string, price: string) {
-    return post(`${this.baseUrl}/ipads`, { name, imageUrl, color, batteryLife, description, display, storage, price }) as Promise<iPad>;
+  addIpad(name: string, imageUrl: string, color: string, batteryLife: number, description: string, display: number, storage: number, price: string) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+
+    return this.http.post<iPad>(`${this.baseUrl}/ipads`, { name, imageUrl, color, batteryLife, description, display, storage, price }, { headers })
   }
 
   // iMac Services
   getAllImacs() {
-    return get(`${this.baseUrl}/imacs`) as Promise<iMac[]>;
+    return this.http.get<iMac[]>(`${this.baseUrl}/imacs`);
   }
 
   getImac(id: string) {
-    return get(`${this.baseUrl}/imacs/${id}`) as Promise<iMac>;
+    return this.http.get<iMac>(`${this.baseUrl}/imacs/${id}`);
   }
 
-  addImac(name: string, imageUrl: string, cpu: string, gpu: string, description: string, display: string, storage: string, price: string) {
-    return post(`${this.baseUrl}/imacs`, { name, imageUrl, cpu, gpu, description, display, storage, price }) as Promise<iMac>;
+  addImac(name: string, imageUrl: string, cpu: number, gpu: number, description: string, display: number, storage: number, price: string) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+
+    return this.http.post<iMac>(`${this.baseUrl}/imacs`, { name, imageUrl, cpu, gpu, description, display, storage, price }, { headers })
   }
 }
