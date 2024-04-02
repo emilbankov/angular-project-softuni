@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
 import { UserAuth } from 'src/app/types/user';
+import { get, post } from '../utils/request';
 
 @Injectable({
   providedIn: 'root'
@@ -13,26 +13,34 @@ export class UserService implements OnDestroy {
   user: UserAuth | undefined;
   userSubscription: Subscription;
 
-  isLoggedIn() {
+  isLoggedIn(): boolean {
     return !!localStorage.getItem('accessToken');
   }
 
-  constructor(private http: HttpClient) {
+  constructor() {
     this.userSubscription = this.user$.subscribe(user => {
       this.user = user
     })
   }
- 
+
   login(email: string, password: string) {
-    return this.http.post<UserAuth>('http://localhost:3030/users/login', { email, password }).pipe(tap((user) => this.user$$.next(user)));
+    return post('http://localhost:3030/users/login', { email, password }).then((user) => {
+      this.user$$.next(user as UserAuth);
+      return user;
+    })
   }
 
   register(email: string, password: string) {
-    return this.http.post<UserAuth>('http://localhost:3030/users/register', { email, password }).pipe(tap((user) => this.user$$.next(user)));
+    return post('http://localhost:3030/users/register', { email, password }).then((user) => {
+      this.user$$.next(user as UserAuth);
+      return user;
+    })
   }
 
   logout() {
-    return this.http.post<UserAuth>('http://localhost:3030/users/logout', {}).pipe(tap(() => this.user$$.next(undefined)));
+    return get('http://localhost:3030/users/logout').then(() => {
+      this.user$$.next(undefined);
+    })
   }
 
   ngOnDestroy(): void {

@@ -15,14 +15,8 @@ export class HeaderComponent {
   }
 
   logout() {
-    this.userService.logout().subscribe({
-      next: (result) => {
-        localStorage.removeItem('accessToken');
-        this.router.navigate(['/']);
-      },
-      error: () => {
-        this.router.navigate(['/login-register']);
-      },
-    });
+    this.userService.logout()
+    localStorage.clear()
+    this.router.navigate(['/'])
   }
 }
