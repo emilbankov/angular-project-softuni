@@ -1,19 +1,33 @@
-# Angular Project Softuni
+Apple
+Explore the world of Apple products. From the latest iPhones to powerful iMacs and versatile iPads, we bring you comprehensive reviews, insightful guides, and the latest news about your favorite Apple devices. Whether you're a long-time Apple enthusiast or new to the ecosystem, find everything you need to know here to make informed decisions and get the most out of your Apple experience.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.13.
+Before you begin
+Make sure you have the following installed:
 
-## Development server
+Node.js
+Getting Started
+Clone the repository to your local machine:
+git clone https://github.com/emilbankov/angular-project-softuni
+Navigate to the project directory:
+cd your-repo
+Open two separate terminals. 
+3.1 In the first terminal (for the client), run the following commands:
+cd client
+npm install
+ng serve
+This will install the client-side dependencies and start the development server.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+3.2 In the second terminal (for the server), run the following command:
 
-## Code scaffolding
+cd server
+node server.js
+This will start the server.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+After running the client commands, you will see a message with a link to the local development server. Ctrl+click on the link in the terminal to open the website directly in your default web browser.
 
-## Build
+Folder Structure
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+client: Contains the client-side code (Angular app).
+server: Contains the server-side code.
+Contributing If you'd like to contribute to the project, feel free to submit a pull request. We welcome contributions!
+Happy coding!
