@@ -11,6 +11,11 @@
                 <input type="text" name="imageUrl" placeholder="Image URL" ngModel #inputImageUrlAccessory="ngModel" required pattern="^https?:\/\/.+">
                 <div class="error-msg" *ngIf="inputImageUrlAccessory.dirty && inputImageUrlAccessory.errors?.['required']">Image URL is required!</div>
                 <div class="error-msg" *ngIf="inputImageUrlAccessory.dirty && inputImageUrlAccessory.errors?.['pattern']">Provide a valid Image URL!</div>
+
+                <input type="text" name="type" placeholder="Type" ngModel #inputTypeAccessory="ngModel" required pattern="\b(iphone|ipad|imac)\b">
+                <div class="error-msg" *ngIf="inputTypeAccessory.dirty && inputTypeAccessory.errors?.['required']">Type is required!</div>
+                <div class="error-msg" *ngIf="inputTypeAccessory.dirty && inputTypeAccessory.errors?.['pattern']">Provide a valid product type iphone, ipad or imac!</div>
+
                 <button>Add Accessory</button>
             </form>
         </div>
