@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { iPhone } from 'src/app/types/iphone';
+import { UserService } from '../../user/user.service';
 
 @Component({
   selector: 'app-iphone-details',
@@ -11,13 +12,16 @@ import { iPhone } from 'src/app/types/iphone';
 
 export class iPhoneDetailsComponent implements OnInit {
   iphone = {} as iPhone;
-  constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  isOwner: boolean = false;
+
+  constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute, private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((data) => {
       const id = data['iphoneId'];
       this.apiService.getIphone(id).subscribe((iphone) => {
         this.iphone = iphone;
+        this.isOwner = this.userService.user?._id === this.iphone._ownerId;
       })
     })
   }
