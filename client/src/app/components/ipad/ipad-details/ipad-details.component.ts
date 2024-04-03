@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import iPad from 'src/app/types/ipad';
 import { UserService } from '../../user/user.service';
+import { Accessory } from 'src/app/types/accessory';
 
 @Component({
   selector: 'app-ipad-details',
@@ -13,6 +14,7 @@ import { UserService } from '../../user/user.service';
 export class iPadDetailsComponent implements OnInit {
   ipad = {} as iPad;
   isOwner: boolean = false;
+  accessories: Accessory[] = [];
 
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute, private router: Router, private userService: UserService) { }
 
@@ -23,6 +25,12 @@ export class iPadDetailsComponent implements OnInit {
         this.ipad = ipad;
         this.isOwner = this.userService.user?._id === this.ipad._ownerId;
       })
+    })
+
+    this.apiService.getAllAccessories().subscribe((accessories) => {
+      this.accessories = accessories.filter((accessory) => {
+        return accessory.type === 'ipad';
+      });
     })
   }
 
