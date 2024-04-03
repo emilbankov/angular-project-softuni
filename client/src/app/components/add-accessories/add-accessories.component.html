@@ -2,7 +2,7 @@
     <div class="add-accessories">
         <div class="form-add-accessory">
             <span class="accessory">Accessory</span>
-            <form class="form" id="iphone-form">
+            <form class="form" #addAccessoryForm="ngForm" (ngSubmit)="addAccessory(addAccessoryForm)">
                 <h3>Accessory</h3>
                 <input type="text" name="name" placeholder="Name" ngModel #inputNameAccessory="ngModel" required minlength="5" maxlength="25">
                 <div class="error-msg" *ngIf="inputNameAccessory.dirty && inputNameAccessory.errors?.['required']">Name is required!</div>
