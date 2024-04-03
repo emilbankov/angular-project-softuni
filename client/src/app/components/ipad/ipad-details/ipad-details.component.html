@@ -37,7 +37,7 @@
                 <a class="ipad-add-accessory-button" routerLink="/ipad-catalog/ipad-attach-accessory/{{ ipad._id }}">Attach accessory</a>
                 <div class="ipad-edit-delete">
                     <a class="ipad-edit-button" routerLink="/ipad-catalog/ipad-edit/{{ ipad._id }}">Edit</a>
-                    <a class="ipad-delete-button">Delete</a>
+                    <a class="ipad-delete-button" (click)="deleteIpad()">Delete</a>
                 </div>
             </div>
         </div>
