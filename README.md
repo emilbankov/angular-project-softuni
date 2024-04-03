@@ -1,3 +1,13 @@
+# Apple
+
+Explore the world of Apple products. From the latest iPhones to powerful iMacs and versatile iPads, we bring you comprehensive reviews, insightful guides, and the latest news about your favorite Apple devices. Whether you're a long-time Apple enthusiast or new to the ecosystem, find everything you need to know here to make informed decisions and get the most out of your Apple experience.
+
+## Before you begin
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+
 ## Getting Started
 
 1. Clone the repository to your local machine:
