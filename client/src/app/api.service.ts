@@ -47,6 +47,19 @@ export class ApiService {
     return this.http.put<iPhone>(`${this.baseUrl}/iphones/${iphoneId}`, { name, imageUrl, color, batteryLife, description, display, storage, price }, { headers });
   }
 
+  deleteIphone(iphoneId: string) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+
+    return this.http.delete<iPhone>(`${this.baseUrl}/iphones/${iphoneId}`, { headers });
+  }
+
   // iPad Services
   getAllIpads() {
     return this.http.get<iPad[]>(`${this.baseUrl}/ipads`);
@@ -82,6 +95,19 @@ export class ApiService {
     return this.http.put<iPad>(`${this.baseUrl}/ipads/${ipadId}`, { name, imageUrl, color, batteryLife, description, display, storage, price }, { headers });
   }
 
+  deleteIpad(ipadId: string) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+
+    return this.http.delete<iPad>(`${this.baseUrl}/ipads/${ipadId}`, { headers });
+  }
+
   // iMac Services
   getAllImacs() {
     return this.http.get<iMac[]>(`${this.baseUrl}/imacs`);
@@ -115,5 +141,18 @@ export class ApiService {
     });
 
     return this.http.put<iMac>(`${this.baseUrl}/imacs/${imacId}`, { name, imageUrl, cpu, gpu, description, display, storage, price }, { headers });
+  }
+
+  deleteImac(imacId: string) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+
+    return this.http.delete<iMac>(`${this.baseUrl}/imacs/${imacId}`, { headers });
   }
 }
