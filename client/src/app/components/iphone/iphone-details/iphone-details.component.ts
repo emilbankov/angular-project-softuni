@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { iPhone } from 'src/app/types/iphone';
 import { UserService } from '../../user/user.service';
+import { Accessory } from 'src/app/types/accessory';
 
 @Component({
   selector: 'app-iphone-details',
@@ -12,6 +13,7 @@ import { UserService } from '../../user/user.service';
 
 export class iPhoneDetailsComponent implements OnInit {
   iphone = {} as iPhone;
+  accessories: Accessory[] = [];
   isOwner: boolean = false;
 
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute, private router: Router, private userService: UserService) { }
@@ -23,6 +25,12 @@ export class iPhoneDetailsComponent implements OnInit {
         this.iphone = iphone;
         this.isOwner = this.userService.user?._id === this.iphone._ownerId;
       })
+    })
+
+    this.apiService.getAllAccessories().subscribe((accessories) => {
+      this.accessories = accessories.filter((accessory) => {
+        return accessory.type === 'iphone';
+      });
     })
   }
 
