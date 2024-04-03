@@ -24,3 +24,18 @@ Description: The most advanced Mac for demanding workflows.
 Display: 21.5
 Storage: 256
 Price: 1199,99
+
+iPhone accessory
+name: Cable
+imageUrl: http://localhost:4200/assets/images/apple-accessories/cable.jpeg
+type: iphone
+
+iPad accessory
+name: AirPods Pro
+imageUrl: http://localhost:4200/assets/images/apple-accessories/airpods-pro.jpg
+type: ipad
+
+iMac accessory
+name: AirPods Max
+imageUrl: http://localhost:4200/assets/images/apple-accessories/airpods-max.jpg
+type: imac

@@ -1502,7 +1502,78 @@
             }
         },
         accessories: {
-
+            "2eed2c57-f94d-475f-aaec-a17698fe3161": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iPhone Case",
+                imageUrl: "http://localhost:4200/assets/images/apple-accessories/iphone-case.jpg",
+                type: "iphone",
+                _createdOn: 1712171482860,
+                _id: "2eed2c57-f94d-475f-aaec-a17698fe3161"
+            },
+            "3200a753-8e45-4e66-b166-d114f214a1e6": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "AirPods Pro",
+                imageUrl: "http://localhost:4200/assets/images/apple-accessories/airpods-pro.jpg",
+                type: "iphone",
+                _createdOn: 1712169358379,
+                _id: "3200a753-8e45-4e66-b166-d114f214a1e6"
+            },
+            "67e7b70f-ce67-4546-b571-96e84d4624a5": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "Adapter",
+                imageUrl: "http://localhost:4200/assets/images/apple-accessories/adapter.jpg",
+                type: "iphone",
+                _createdOn: 1712169388706,
+                _id: "67e7b70f-ce67-4546-b571-96e84d4624a5"
+            },
+            "8b29f427-3604-4251-bc75-ff0e4d0b1387": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "Cable",
+                imageUrl: "http://localhost:4200/assets/images/apple-accessories/cable.jpeg",
+                type: "iphone",
+                _createdOn: 1712169410735,
+                _id: "8b29f427-3604-4251-bc75-ff0e4d0b1387"
+            },
+            "ab52f1bf-ff2f-4de4-802e-0835ce9dc891": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iPad Keyboard",
+                imageUrl: "http://localhost:4200/assets/images/apple-accessories/ipad-keyboard.png",
+                type: "ipad",
+                _createdOn: 1712169633863,
+                _id: "ab52f1bf-ff2f-4de4-802e-0835ce9dc891"
+            },
+            "f173d7df-c0a0-4a8e-bd9d-35857ab5bcce": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "Pen Pro",
+                imageUrl: "https://cdn.ozone.bg/media/catalog/product/cache/1/image/400x498/a4e40ebdc3e371adff845072e1c73f37/s/t/16b14234ce33677a6b43a3af07e9cdfa/stilus-cellularline---pen-pro--ipad--byal-31.jpg",
+                type: "ipad",
+                _createdOn: 1712169715850,
+                _id: "f173d7df-c0a0-4a8e-bd9d-35857ab5bcce"
+            },
+            "1adf334e-be09-450b-9f41-973162a5822b": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iMac Mouse",
+                imageUrl: "http://localhost:4200/assets/images/apple-accessories/imac-mouse.jpg",
+                type: "imac",
+                _createdOn: 1712169809939,
+                _id: "1adf334e-be09-450b-9f41-973162a5822b"
+            },
+            "bf7d3e01-8fac-4742-b425-1facfa9b8d34": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "iMac Keyboard",
+                imageUrl: "http://localhost:4200/assets/images/apple-accessories/imac-keyboard.jpg",
+                type: "imac",
+                _createdOn: 1712169827513,
+                _id: "bf7d3e01-8fac-4742-b425-1facfa9b8d34"
+            },
+            "4da5a303-a0e0-4f6d-b923-e5d894ee3208": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                name: "AirPods Max",
+                imageUrl: "http://localhost:4200/assets/images/apple-accessories/airpods-max.jpg",
+                type: "imac",
+                _createdOn: 1712169842615,
+                _id: "4da5a303-a0e0-4f6d-b923-e5d894ee3208"
+            }
         }
     };
     var rules$1 = {
