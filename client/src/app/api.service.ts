@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { iMac } from './types/imac';
 import { iPhone } from './types/iphone';
 import iPad from './types/ipad';
+import { Accessory } from './types/accessory';
 
 @Injectable({
   providedIn: 'root'
@@ -154,5 +155,19 @@ export class ApiService {
     });
 
     return this.http.delete<iMac>(`${this.baseUrl}/imacs/${imacId}`, { headers });
+  }
+
+  // Accessory services
+  addAccessory(name: string, imageUrl: string) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token not found');
+    }
+
+    const headers = new HttpHeaders({
+      'X-Authorization': accessToken
+    });
+
+    return this.http.post<Accessory>(`${this.baseUrl}/accessories`, { name, imageUrl }, { headers });
   }
 }
