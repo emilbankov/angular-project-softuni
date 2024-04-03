@@ -158,7 +158,7 @@ export class ApiService {
   }
 
   // Accessory services
-  addAccessory(name: string, imageUrl: string) {
+  addAccessory(name: string, imageUrl: string, type: string) {
     const accessToken = localStorage.getItem('accessToken');
     if (!accessToken) {
       throw new Error('Access token not found');
@@ -168,6 +168,10 @@ export class ApiService {
       'X-Authorization': accessToken
     });
 
-    return this.http.post<Accessory>(`${this.baseUrl}/accessories`, { name, imageUrl }, { headers });
+    return this.http.post<Accessory>(`${this.baseUrl}/accessories`, { name, imageUrl, type }, { headers });
+  }
+
+  getAllAccessories() {
+    return this.http.get<Accessory[]>(`${this.baseUrl}/accessories`);
   }
 }
