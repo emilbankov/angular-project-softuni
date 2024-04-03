@@ -13,7 +13,7 @@ export class UserService implements OnDestroy {
   user: UserAuth | undefined;
   userSubscription: Subscription;
 
-  isLoggedIn(): boolean {
+  get isLoggedIn(): boolean {
     return !!localStorage.getItem('accessToken');
   }
 
