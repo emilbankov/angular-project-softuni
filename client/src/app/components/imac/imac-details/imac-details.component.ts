@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { iMac } from 'src/app/types/imac';
 import { UserService } from '../../user/user.service';
+import { Accessory } from 'src/app/types/accessory';
 
 @Component({
   selector: 'app-imac-details',
@@ -12,6 +13,7 @@ import { UserService } from '../../user/user.service';
 export class iMacDetailsComponent implements OnInit {
   imac = {} as iMac;
   isOwner: boolean = false;
+  accessories: Accessory[] = [];
   
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute, private router: Router, private userService: UserService) { }
 
@@ -22,6 +24,12 @@ export class iMacDetailsComponent implements OnInit {
         this.imac = imac;
         this.isOwner = this.userService.user?._id === this.imac._ownerId;
       })
+    })
+
+    this.apiService.getAllAccessories().subscribe((accessories) => {
+      this.accessories = accessories.filter((accessory) => {
+        return accessory.type === 'imac';
+      });
     })
   }
 

@@ -46,18 +46,9 @@
 <section class="site-section imac-accessories-container">
     <h3>Accessories</h3>
     <div class="imac-accessories-grid">
-        <div class="imac-accessory-card">
-            <img src="../../../../assets/images/apple-accessories/imac-mouse.jpg">
-            <h4>iMac Mouse</h4>
-        </div>
-        <div class="imac-accessory-card">
-            <img src="../../../../assets/images/apple-accessories/imac-keyboard.jpg">
-            <h4>iMac Keyboard</h4>
-        </div>
-        <div class="imac-accessory-card">
-            <img src="../../../../assets/images/apple-accessories/airpods-max.jpg">
-            <h4>AirPods Max</h4>
+        <div *ngFor="let accessory of accessories" class="imac-accessory-card">
+            <img src="{{ accessory.imageUrl }}">
+            <h4>{{ accessory.name }}</h4>
         </div>
     </div>
-    <!-- <h3 class="imac-no-accessories">This product has no accessories yet...</h3> -->
 </section>
