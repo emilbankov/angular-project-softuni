@@ -34,7 +34,6 @@
                 <span class="iphone-details-price">${{ iphone.price && iphone.price.split(",")[0] }}<span class="iphone-details-superscript">,{{ iphone.price && iphone.price.split(",")[1] }}</span></span>
             </div>
             <div *ngIf="isOwner" class="iphone-details-buttons">
-                <a class="iphone-add-accessory-button" routerLink="/iphone-catalog/iphone-attach-accessory/{{ iphone._id }}">Attach accessory</a>
                 <div class="iphone-edit-delete">
                     <a class="iphone-edit-button" routerLink="/iphone-catalog/iphone-edit/{{ iphone._id }}">Edit</a>
                     <a class="iphone-delete-button" (click)="deleteIphone()">Delete</a>

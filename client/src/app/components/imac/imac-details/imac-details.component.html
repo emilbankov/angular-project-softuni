@@ -34,7 +34,6 @@
                 <span class="imac-details-price">${{ imac.price && imac.price.split(",")[0] }}<span class="imac-details-superscript">,{{ imac.price && imac.price.split(",")[1] }}</span></span>
             </div>
             <div *ngIf="isOwner" class="imac-details-buttons">
-                <a class="imac-add-accessory-button" routerLink="/imac-catalog/imac-attach-accessory/{{ imac._id }}">Attach accessory</a>
                 <div class="imac-edit-delete">
                     <a class="imac-edit-button" routerLink="/imac-catalog/imac-edit/{{ imac._id }}">Edit</a>
                     <a class="imac-delete-button" (click)="deleteImac()">Delete</a>
