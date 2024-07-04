@@ -45,3 +45,6 @@ Make sure you have the following installed:
 If you'd like to contribute to the project, feel free to submit a pull request. We welcome contributions!
 
 Happy coding!
+
+<!-- Firebase url -->
+https://apple-1976.web.app
