@@ -46,5 +46,7 @@ If you'd like to contribute to the project, feel free to submit a pull request. 
 
 Happy coding!
 
-<!-- Firebase url -->
+<!-- Firebase -->
+ - npm run build
+ - firebase deploy
 https://apple-1976.web.app
